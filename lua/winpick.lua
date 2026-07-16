@@ -8,10 +8,10 @@ local api = vim.api
 local ESC_CODE = 27
 
 --- Shows label and buffer name, if available. Else, show only the label.
---- @param label string: Label to be shown alongside the buffer name.
---- @param _ number: ID of the selected window.
---- @param bufnr number: ID of the selected window's buffer.
---- @return string: The label as is.
+---@param label string : Label to be shown alongside the buffer name.
+---@param _     number : ID of the selected window.
+---@param bufnr number : ID of the selected window's buffer.
+---@return string: The label as is.
 local function default_label_formatter(label, _, bufnr)
   return label
   -- local buf_name = api.nvim_buf_get_name(bufnr)
@@ -43,7 +43,7 @@ local function default_filter_window(winid, bufnr)
     message = true,
     help = true,
     qf = true,
-    prompt = true,
+    prompt = true
   }
   if excluded_ft[filetype] then
     return false
@@ -57,7 +57,7 @@ local defaults = {
   filter = default_filter_window,
   prompt = "Pick a window: ",
   format_label = default_label_formatter,
-  chars = nil,
+  chars = nil
 }
 
 local M = {}
@@ -65,21 +65,18 @@ local M = {}
 --- Prompts for a window to be selected. A callback is used for handling the action. The default
 --- action is to focus the selected window. The argument passed to the callback is a window ID if a
 --- window is selected or nil if it the selection is aborted.
---- @param opts table | nil: Optional options that may override global options.
---- @return number | nil, number | nil: Selected window table containing ID and its corresponding buffer ID.
+---@param opts table | nil: Optional options that may override global options.
+---@return number | nil, number | nil: Selected window table containing ID and its corresponding buffer ID.
 function M.select(opts)
   opts = vim.tbl_deep_extend("force", defaults, opts or {})
 
   local wins = api.nvim_tabpage_list_wins(0)
-  wins = vim.tbl_map(function(winid)
-    return {
-      id = winid,
-      bufnr = api.nvim_win_get_buf(winid),
-    }
+  wins = vim.tbl_map(function (winid)
+    return { id = winid, bufnr = api.nvim_win_get_buf(winid) }
   end, wins)
 
   -- Filter out some buffers according to configuration.
-  local eligible_wins = vim.tbl_filter(function(win)
+  local eligible_wins = vim.tbl_filter(function (win)
     if opts.filter then
       return opts.filter(win.id, win.bufnr)
     end
@@ -119,7 +116,7 @@ function M.select(opts)
 
   local ok, choice = pcall(vim.fn.getchar) -- Ctrl-C returns an error
 
-  vim.cmd("mode")                         -- clear cmdline again to remove pick-up message
+  vim.cmd("mode") -- clear cmdline again to remove pick-up message
   utils.hide_cues(cues)
 
   local is_ctrl_c = not ok
@@ -141,7 +138,7 @@ function M.select(opts)
 end
 
 --- Sets up the plug-in by overriding default options.
---- @param opts table: Options to be globally overridden.
+---@param opts table: Options to be globally overridden.
 function M.setup(opts)
   defaults = vim.tbl_deep_extend("force", defaults, opts or {})
 end
@@ -149,9 +146,9 @@ end
 --- Default values, for reusability. Read-only, errors if modified.
 M.defaults = setmetatable({}, {
   __index = defaults,
-  __newindex = function()
+  __newindex = function ()
     error("defaults are read-only")
-  end,
+  end
 })
 
 return M

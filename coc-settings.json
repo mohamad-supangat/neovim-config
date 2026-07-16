@@ -103,7 +103,6 @@
   // "prettier.resolveGlobalModules": true,
   // "outline.autoPreview": true
   // php cs fixer
-  "php-cs-fixer.config": "/home/deve/.config/nvim/configs/php-cs-fixer.php",
   "snippets.textmateSnippetsRoots": [
     "~/.config/nvim/snippets"
   ],
