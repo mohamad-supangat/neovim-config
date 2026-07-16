@@ -1,5 +1,9 @@
 {
   "plugins": {
+    "arborist.nvim": {
+      "rev": "fdeef56c2840c6772b9f68c5774ed87e9340ec7d",
+      "src": "https://github.com/arborist-ts/arborist.nvim"
+    },
     "coc.nvim": {
       "rev": "953f1b674802d41981229859848295a9251c2bce",
       "src": "https://github.com/neoclide/coc.nvim"
@@ -23,6 +27,10 @@
     "smart-splits.nvim": {
       "rev": "9493405fb8ee683aa6efd50c529f6296ad8f40ad",
       "src": "https://github.com/mrjones2014/smart-splits.nvim"
+    },
+    "supermaven-nvim": {
+      "rev": "07d20fce48a5629686aefb0a7cd4b25e33947d50",
+      "src": "https://github.com/supermaven-inc/supermaven-nvim"
     },
     "vim-snippets": {
       "rev": "ededcf7581962ee616cadab360d5966f3307f11a",
