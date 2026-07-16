@@ -1,28 +1,29 @@
 {
   "plugins": {
-    "arborist.nvim": {
-      "rev": "fdeef56c2840c6772b9f68c5774ed87e9340ec7d",
-      "src": "https://github.com/arborist-ts/arborist.nvim"
-    },
     "coc.nvim": {
-      "rev": "953f1b674802d41981229859848295a9251c2bce",
-      "src": "https://github.com/neoclide/coc.nvim"
+      "rev": "d1689a4876305e5fc6691910c8ee6f1eb5da2219",
+      "src": "https://github.com/neoclide/coc.nvim",
+      "version": "'release'"
     },
     "floatty.nvim": {
       "rev": "ba6c7cd828474084001d131fc0160fcb3bbef6d2",
       "src": "https://github.com/ingur/floatty.nvim"
     },
-    "grug-far.nvim": {
-      "rev": "1cc080f55706b38aabfa97d40acb6adf59ac4a5a",
-      "src": "https://github.com/MagicDuck/grug-far.nvim"
-    },
     "mini.nvim": {
-      "rev": "05a80b0340a92136a93ab04346cf97de3f165948",
+      "rev": "9459d7f41ae77d909579dab0aea2bdd3210fac9f",
       "src": "https://github.com/nvim-mini/mini.nvim"
+    },
+    "nvim-pack-ui": {
+      "rev": "f36e3cfd4859052b5751c681edb80feed0b87966",
+      "src": "https://codeberg.org/cryptomilk/nvim-pack-ui"
     },
     "plenary.nvim": {
       "rev": "74b06c6c75e4eeb3108ec01852001636d85a932b",
       "src": "https://github.com/nvim-lua/plenary.nvim"
+    },
+    "render-markdown.nvim": {
+      "rev": "f422cb5c6855f150e2ddcfaf44e7157b98b34f6a",
+      "src": "https://github.com/MeanderingProgrammer/render-markdown.nvim"
     },
     "smart-splits.nvim": {
       "rev": "9493405fb8ee683aa6efd50c529f6296ad8f40ad",

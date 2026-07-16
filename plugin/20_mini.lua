@@ -1,8 +1,3 @@
--- plugin list
-vim.pack.add({
-  'https://github.com/nvim-mini/mini.nvim',
-})
-
 vim.cmd('colorscheme miniwinter')
 
 local keymap = vim.keymap.set

@@ -9,10 +9,6 @@ vim.g.coc_global_extensions = {
   'coc-prettier'
 }
 
-vim.pack.add({
-  'hstps://github.com/neoclide/coc.nvim'
-})
-
 local keymap = vim.keymap.set
 
 -- coc multiple cursor

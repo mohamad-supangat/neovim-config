@@ -1,9 +1,6 @@
-vim.pack.add({
-  "https://github.com/arborist-ts/arborist.nvim",
-})
 require("arborist").setup({
   install_popular = false,
-  ensure_installed = {
+  ensure_installedd = {
     "lua",
     "markdown_inline",
     "vimdoc",

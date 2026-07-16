@@ -1,4 +1,3 @@
-vim.pack.add({'https://github.com/mrjones2014/smart-splits.nvim'})
 require("smart-splits").setup({})
 
 local keymap = vim.keymap.set

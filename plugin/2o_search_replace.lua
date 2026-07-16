@@ -1,6 +1,3 @@
-vim.pack.add({
-  "https://github.com/MagicDuck/grug-far.nvim"
-})
 vim.g.maplocalleader = ","
 
 require("grug-far").setup({

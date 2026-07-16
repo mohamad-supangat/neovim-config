@@ -1,7 +1,3 @@
-vim.pack.add({
-  "https://github.com/nvim-lua/plenary.nvim"
-})
-
 vim.g.mapleader    = ' '
 vim.opt.clipboard  = 'unnamedplus'
 vim.opt.number     = true

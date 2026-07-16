@@ -1,7 +1,3 @@
-vim.pack.add({
-  'https://github.com/ingur/floatty.nvim'
-})
-
 local term = require("floatty").setup({})
 local keymap = vim.keymap.set
 

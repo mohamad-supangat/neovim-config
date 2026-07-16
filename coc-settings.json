@@ -99,5 +99,6 @@
   "php-cs-fixer.config": "/home/deve/.config/nvim/configs/php-cs-fixer.php",
   "snippets.textmateSnippetsRoots": [
     "~/.config/nvim/snippets"
-  ]
+  ],
+  "snippets.ultisnips.pythonPrompt": false
 }
