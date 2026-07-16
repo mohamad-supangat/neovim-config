@@ -1,9 +1,8 @@
 {
   "languageserver": {
-    "phpantomlsp": {
-      "command": "phpantomlsp",
-      "args": ["--language-server"],
-      "filetypes": ["php"],
+    "phpantom_lsp": {
+      "command": "phpantom_lsp",
+      "filetypes": ["php", "blade"],
       "rootPatterns": ["composer.json", ".git"]
     }
   },

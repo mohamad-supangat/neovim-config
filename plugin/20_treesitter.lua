@@ -1,5 +1,5 @@
 require("tree-sitter-manager").setup({
-  ensure_installedd = {
+  ensure_installed = {
     "lua",
     "markdown_inline",
     "vimdoc",
