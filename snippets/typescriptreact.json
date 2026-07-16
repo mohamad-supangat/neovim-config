@@ -1,0 +1,56 @@
+{
+  "bs:form-group": {
+    "body": [
+      "<div className=\"form-group\">",
+      "    <label htmlFor=\"${1:}\" className='form-label'>{__('${2:}')}</label>",
+      "    <input type=\"text\" name='${1:}' className=\"form-control\" />",
+      "</div>"
+    ],
+    "prefix": "bs:form-group"
+  },
+  "can:nextPage": {
+    "body": ["if (!can([\"${1:}\"])) {", "  return <UnauthorizedPage />;", "}"],
+    "prefix": "can"
+  },
+  "echo __": {
+    "body": "{__('${1:}')}",
+    "prefix": "echo __"
+  },
+  "sim-lpu:column": {
+    "body": [
+      "{",
+      "  accessorKey: \"${1:}\",",
+      "  header: ({ column }) => {",
+      "    return (",
+      "      <Button",
+      "        variant=\"ghost\"",
+      "        onClick={() => column.toggleSorting(column.getIsSorted() === \"asc\")}",
+      "      >",
+      "        ${2:}",
+      "        <ArrowUpDown className=\"ml-2 h-4 w-4\" />",
+      "      </Button>",
+      "    );",
+      "  },",
+      "},"
+    ],
+    "prefix": "sim-lpu:column"
+  },
+  "sim-lpu:formfield": {
+    "body": [
+      "<FormField",
+      "  control={form.control}",
+      "  name=\"${1:}\"",
+      "  render={({ field }) => (",
+      "    <FormItem>",
+      "      <FormLabel>${2:}</FormLabel>",
+      "      <FormControl>",
+      "        <Input {...field} autoFocus={false} />",
+      "      </FormControl>",
+      "      <FormMessage />",
+      "    </FormItem>",
+      "  )}",
+      "/>"
+    ],
+    "prefix": "sim-lpu:formfield"
+  }
+}

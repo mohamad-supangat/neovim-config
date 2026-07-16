@@ -1,0 +1,28 @@
+{
+  "sekolahku:apps": {
+    "body": [
+      "\"apps\": [",
+      "    {",
+      "        \"title\": \"Buku Tabungan\",",
+      "        \"guards\": [\"teacher\"],",
+      "        \"icon\": \"mdi-notebook-outline\",",
+      "        \"color\": \"grey-2\",",
+      "        \"iconColor\": \"blue-8\",",
+      "        \"route\": \"savings_book.teacher.dashboard\",",
+      "        \"permissions\": [\"show savings book student\"]",
+      "    }",
+      "]"
+    ],
+    "prefix": "sekolahku:apps"
+  },
+  "sekolahku:excel-column": {
+    "body": [
+      "{",
+      "    \"title\": \"${1:}\",",
+      "    \"key\": \"${2:}\",",
+      "    \"example\": \"${3:}\"",
+      "},"
+    ],
+    "prefix": "sekolahku:excel-column"
+  }
+}

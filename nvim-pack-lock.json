@@ -1,0 +1,32 @@
+{
+  "plugins": {
+    "coc.nvim": {
+      "rev": "953f1b674802d41981229859848295a9251c2bce",
+      "src": "https://github.com/neoclide/coc.nvim"
+    },
+    "floatty.nvim": {
+      "rev": "ba6c7cd828474084001d131fc0160fcb3bbef6d2",
+      "src": "https://github.com/ingur/floatty.nvim"
+    },
+    "grug-far.nvim": {
+      "rev": "1cc080f55706b38aabfa97d40acb6adf59ac4a5a",
+      "src": "https://github.com/MagicDuck/grug-far.nvim"
+    },
+    "mini.nvim": {
+      "rev": "05a80b0340a92136a93ab04346cf97de3f165948",
+      "src": "https://github.com/nvim-mini/mini.nvim"
+    },
+    "plenary.nvim": {
+      "rev": "74b06c6c75e4eeb3108ec01852001636d85a932b",
+      "src": "https://github.com/nvim-lua/plenary.nvim"
+    },
+    "smart-splits.nvim": {
+      "rev": "9493405fb8ee683aa6efd50c529f6296ad8f40ad",
+      "src": "https://github.com/mrjones2014/smart-splits.nvim"
+    },
+    "vim-snippets": {
+      "rev": "ededcf7581962ee616cadab360d5966f3307f11a",
+      "src": "https://github.com/honza/vim-snippets"
+    }
+  }
+}

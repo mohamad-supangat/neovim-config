@@ -1,0 +1,688 @@
+{
+  "Json Response": {
+    "body": ["response()->json(${1});"],
+    "description": "Json Response",
+    "prefix": "json-response"
+  },
+  "Laravel Model: Accessor": {
+    "body": [
+      "/**",
+      " * Get the $1",
+      " *",
+      " * @param  string  \\$value",
+      " * @return ${4:string}",
+      " */",
+      "public function get$2Attribute(\\$value)",
+      "{",
+      "\treturn ${3:\\$value};",
+      "}"
+    ],
+    "description": "Accessors: Define an accessor for the model.",
+    "prefix": "Model::ac"
+  },
+  "Laravel Model: Appends": {
+    "body": [
+      "/**",
+      " * The accessors to append to the model's array form.",
+      " *",
+      " * @var array",
+      " */",
+      "protected \\$appends = ['$0'];"
+    ],
+    "description": "Appends: The accessors to append to the model's array form.",
+    "prefix": "Model::ap"
+  },
+  "Laravel Model: Attribute": {
+    "body": [
+      "/**",
+      " * Interact with the $1 attribute.",
+      " *",
+      " * @return \\Illuminate\\Database\\Eloquent\\Casts\\Attribute",
+      " */",
+      "public function $1(): Attribute",
+      "{",
+      "\treturn Attribute::make(",
+      "\t\tget: fn ($2 \\$value) => $3,",
+      "\t\tset: fn ($2 \\$value) => $4,",
+      "\t);",
+      "}"
+    ],
+    "description": "Attribute: Define a attribute method for the model.",
+    "prefix": "Model::att"
+  },
+  "Laravel Model: Attribute Casting": {
+    "body": [
+      "/**",
+      " * The attributes that should be cast.",
+      " *",
+      " * @var array",
+      " */",
+      "protected \\$casts = [",
+      "\t'$1' => '${0:type}',",
+      "];"
+    ],
+    "description": "Attribute Casting: The attributes that should be cast.",
+    "prefix": "Model::c"
+  },
+  "Laravel Model: Boot": {
+    "body": [
+      "/**",
+      " * The \"booting\" method of the model.",
+      " *",
+      " * @return void",
+      " */",
+      "protected static function boot()",
+      "{",
+      "\tparent::boot();",
+      "\t",
+      "\t$0",
+      "}"
+    ],
+    "description": "Boot: The \"booting\" method of the model.",
+    "prefix": "Model::b"
+  },
+  "Laravel Model: Created At": {
+    "body": [
+      "/**",
+      " * The name of the \"created at\" column.",
+      " *",
+      " * @var string|null",
+      " */",
+      "const CREATED_AT = '${1:created_at}';$0"
+    ],
+    "description": "Created At: The name of the \"created at\" column.",
+    "prefix": "Model::cat"
+  },
+  "Laravel Model: Database Connection": {
+    "body": [
+      "/**",
+      " * The connection name for the model.",
+      " *",
+      " * @var string|null",
+      " */",
+      "protected \\$connection = '$0';"
+    ],
+    "description": "Database Connection: The connection name for the model.",
+    "prefix": "Model::con"
+  },
+  "Laravel Model: Date Format": {
+    "body": [
+      "/**",
+      " * The storage format of the model's date columns.",
+      " *",
+      " * @var string",
+      " */",
+      "protected \\$dateFormat = '$0';"
+    ],
+    "description": "Date Format: The storage format of the model's date columns.",
+    "prefix": "Model::df"
+  },
+  "Laravel Model: Dates": {
+    "body": [
+      "/**",
+      " * The attributes that should be mutated to dates.",
+      " *",
+      " * @var array",
+      " */",
+      "protected \\$dates = ['created_at', 'updated_at', '${0:deleted_at}'];"
+    ],
+    "description": "Dates: The attributes that should be mutated to dates.",
+    "prefix": "Model::d"
+  },
+  "Laravel Model: Deleted At": {
+    "body": [
+      "/**",
+      " * The name of the \"deleted at\" column.",
+      " *",
+      " * @var string",
+      " */",
+      "const DELETED_AT = '${1:deleted_at}';$0"
+    ],
+    "description": "Deleted At: The name of the \"deleted at\" column.",
+    "prefix": "Model::dat"
+  },
+  "Laravel Model: Dispatches Events": {
+    "body": [
+      "/**",
+      " * The event map for the model.",
+      " *",
+      " * @var array",
+      " */",
+      "protected \\$dispatchesEvents = [",
+      "\t'$1' => $2,",
+      "];"
+    ],
+    "description": "Dispatches Events: The event map for the model.",
+    "prefix": "Model::de"
+  },
+  "Laravel Model: Get attribute": {
+    "body": [
+      "/**",
+      " * Interact with the $1 attribute.",
+      " *",
+      " * @return \\Illuminate\\Database\\Eloquent\\Casts\\Attribute",
+      " */",
+      "public function $1(): Attribute",
+      "{",
+      "\treturn Attribute::get(fn ($2 \\$value) => $3);",
+      "}"
+    ],
+    "description": "Attribute: Define a get attribute method for the model.",
+    "prefix": "Model::gatt"
+  },
+  "Laravel Model: Guard Attributes": {
+    "body": [
+      "/**",
+      " * The attributes that aren't mass assignable.",
+      " *",
+      " * @var array<string>",
+      " */",
+      "protected \\$guarded = ['${1:*}'];"
+    ],
+    "description": "Guard Attributes: The attributes that aren't mass assignable.",
+    "prefix": "Model::g"
+  },
+  "Laravel Model: Hidden": {
+    "body": [
+      "/**",
+      " * The attributes that should be hidden for arrays.",
+      " *",
+      " * @var array",
+      " */",
+      "protected \\$hidden = ['$0'];"
+    ],
+    "description": "Hidden: The attributes that should be hidden for arrays.",
+    "prefix": "Model::h"
+  },
+  "Laravel Model: Incrementing": {
+    "body": [
+      "/**",
+      " * Indicates if the IDs are auto-incrementing.",
+      " *",
+      " * @var bool",
+      " */",
+      "public \\$incrementing = ${1:true};"
+    ],
+    "description": "Incrementing: Indicates if the IDs are auto-incrementing.",
+    "prefix": "Model::i"
+  },
+  "Laravel Model: KeyType": {
+    "body": [
+      "/**",
+      " * The \"type\" of the primary key ID.",
+      " *",
+      " * @var string",
+      " */",
+      "protected \\$keyType = '${1:int}';"
+    ],
+    "description": "KeyType: The \"type\" of the primary key ID.",
+    "prefix": "Model::kt"
+  },
+  "Laravel Model: Local Scope": {
+    "body": [
+      "/**",
+      " * Scope a query to only include $1",
+      " *",
+      " * @param  \\Illuminate\\Database\\Eloquent\\Builder \\$query",
+      " * @return \\Illuminate\\Database\\Eloquent\\Builder",
+      " */",
+      "public function scope$2(\\$query)",
+      "{",
+      "\treturn \\$query->where('$3'$0);",
+      "}"
+    ],
+    "description": "Local Scope: Query a local scope within your model.",
+    "prefix": "Model::s"
+  },
+  "Laravel Model: Mass Assignment (Fillable) ": {
+    "body": [
+      "/**",
+      " * The attributes that are mass assignable.",
+      " *",
+      " * @var array<string>",
+      " */",
+      "protected \\$fillable = ['$0'];"
+    ],
+    "description": "Mass Assignment (Fillable): The attributes that are mass assignable.",
+    "prefix": "Model::f"
+  },
+  "Laravel Model: Mutator": {
+    "body": [
+      "/**",
+      " * Set the $1",
+      " *",
+      " * @param  string  \\$value",
+      " * @return ${5:void}",
+      " */",
+      "public function set$2Attribute(\\$value)",
+      "{",
+      "\treturn \\$this->attributes['$3'] = ${4:\\$value};",
+      "}"
+    ],
+    "description": "Mutators: Define a mutator for the model.",
+    "prefix": "Model::mu"
+  },
+  "Laravel Model: PerPage": {
+    "body": [
+      "/**",
+      " * The number of models to return for pagination.",
+      " *",
+      " * @var int",
+      " */",
+      "protected \\$perPage = $0;"
+    ],
+    "description": "PerPage: The number of models to return for pagination.",
+    "prefix": "Model::pp"
+  },
+  "Laravel Model: Prevents lazy loading": {
+    "body": [
+      "/**",
+      " * Indicates whether lazy loading will be prevented on this model..",
+      " *",
+      " * @var bool",
+      " */",
+      "protected \\$preventsLazyLoading = $0;"
+    ],
+    "description": "Prevents lazy loading: Indicates whether lazy loading will be prevented on this model..",
+    "prefix": "Model::pll"
+  },
+  "Laravel Model: Primary Key": {
+    "body": [
+      "/**",
+      " * The primary key for the model.",
+      " *",
+      " * @var string",
+      " */",
+      "protected \\$primaryKey = '${1:id}';"
+    ],
+    "description": "Primary Key: The primary key for the model.",
+    "prefix": "Model::pk"
+  },
+  "Laravel Model: Set attribute": {
+    "body": [
+      "/**",
+      " * Interact with the $1 attribute.",
+      " *",
+      " * @return \\Illuminate\\Database\\Eloquent\\Casts\\Attribute",
+      " */",
+      "public function $1(): Attribute",
+      "{",
+      "\treturn Attribute::set(fn ($2 \\$value) => $3);",
+      "}"
+    ],
+    "description": "Attribute: Define a set attribute method for the model.",
+    "prefix": "Model::satt"
+  },
+  "Laravel Model: Table": {
+    "body": [
+      "/**",
+      " * The table associated with the model.",
+      " *",
+      " * @var string",
+      " */",
+      "protected \\$table = '$0';"
+    ],
+    "description": "Protected Table: The table associated with the model.",
+    "prefix": "Model::t"
+  },
+  "Laravel Model: Timestamps": {
+    "body": [
+      "/**",
+      " * Indicates if the model should be timestamped.",
+      " *",
+      " * @var bool",
+      " */",
+      "public \\$timestamps = ${1:true};"
+    ],
+    "description": "Timestamps: Indicates if the model should be timestamped.",
+    "prefix": "Model::ts"
+  },
+  "Laravel Model: Touches": {
+    "body": [
+      "/**",
+      " * The relationships that should be touched on save.",
+      " *",
+      " * @var array",
+      " */",
+      "protected \\$touches = [$0];"
+    ],
+    "description": "Touches: The relationships that should be touched on save.",
+    "prefix": "Model::tc"
+  },
+  "Laravel Model: Updated At": {
+    "body": [
+      "/**",
+      " * The name of the \"updated at\" column.",
+      " *",
+      " * @var string|null",
+      " */",
+      "const UPDATED_AT = '${1:updated_at}';$0"
+    ],
+    "description": "Updated At: The name of the \"updated at\" column.",
+    "prefix": "Model::uat"
+  },
+  "Laravel Model: Visible": {
+    "body": [
+      "/**",
+      " * The attributes that should be visible in arrays.",
+      " *",
+      " * @var array",
+      " */",
+      "protected \\$visible = ['$0'];"
+    ],
+    "description": "Visible: The attributes that should be visible in arrays.",
+    "prefix": "Model::v"
+  },
+  "Route::post action name": {
+    "body": ["Route::post('action', [${1}, 'action'\\])->name('action');", ""],
+    "description": "Route::post action name",
+    "prefix": "route-post-action"
+  },
+  "akun:si-pmn": {
+    "body": ["[", "    'akun'   => '${1:}',", "    'number' => 10,", "],"],
+    "prefix": "akun:si-pmn"
+  },
+  "column": {
+    "body": [
+      "=> [",
+      "                'value'  => 0,",
+      "                'column' => __('$1'),",
+      "            ]"
+    ],
+    "prefix": "column"
+  },
+  "created and updated by::laravel migration": {
+    "body": [
+      "\\$table->nullableUuidMorphs('created_by');",
+      "\\$table->nullableUuidMorphs('updated_by');"
+    ],
+    "prefix": "created and updated by::laravel migration"
+  },
+  "data_get:laravel": {
+    "body": "data_get(${1}, '${2}')",
+    "prefix": "data_get:laravel"
+  },
+  "datatable::sphelper with query builder": {
+    "body": [
+      "\\$model = QueryBuilder::for(${1:class}::class)->allowedFilters([]);",
+      "",
+      "return SpHelper::generateTable(",
+      "    \\$model,",
+      "    [",
+      "        'id',",
+      "        'name',",
+      "    ]",
+      ");"
+    ],
+    "prefix": "datatable::sphelper with query builder"
+  },
+  "defineGates": {
+    "body": [
+      "public function defineGates(): array",
+      "{",
+      "    return [",
+      "        '${1:}.index' => __('Melihat daftar data ${2:}'),",
+      "        '${1:}.create' => __('Menambah data ${2:}'),",
+      "        '${1:}.update' => __('Update data ${2:}'),",
+      "        '${1:}.delete' => __('Hapus data ${2:}'),",
+      "    ];",
+      "}"
+    ],
+    "prefix": "defineGates"
+  },
+  "double:table-column": {
+    "body": "\\$table->double('${1}' . 20, 2)->default(0);",
+    "prefix": "double:table-column"
+  },
+  "echo::translate": {
+    "body": "__('${1}'${2})",
+    "prefix": "echo::translate"
+  },
+  "getRedirectUrl": {
+    "body": [
+      "protected function getRedirectUrl(): string",
+      "{",
+      "    return \\$this->getResource()::getUrl('index');",
+      "}"
+    ],
+    "prefix": "getRedirectUrl"
+  },
+  "getRedirectUrl:view": {
+    "body": [
+      "protected function getRedirectUrl(): string",
+      "{",
+      "    return \\$this->getResource()::getUrl('view', [",
+      "        'record' => \\$this->record->id,",
+      "    ]);",
+      "}"
+    ],
+    "prefix": "getRedirectUrl:view"
+  },
+  "hexa:access-resource": {
+    "body": [
+      "public static function canAccess(): bool",
+      "{",
+      "    return hexa()->can('${1:}');",
+      "}"
+    ],
+    "prefix": "hexa:access-resource"
+  },
+  "hexa:canAccess-page": {
+    "body": [
+      "public static function canAccess(array \\$parameters = []): bool",
+      "{",
+      "    return hexa()->can('${1:}');",
+      "}"
+    ],
+    "prefix": "hexa:canAccess-page"
+  },
+  "hexa:visible": {
+    "body": "->visible(fn () => hexa()->can('${1:}'))",
+    "prefix": "hexa:visible"
+  },
+  "lv:table and fillable": {
+    "body": [
+      "/**",
+      " * The table associated with the model.",
+      " *",
+      " * @var string",
+      " */",
+      "protected \\$table = '${1}';"
+    ],
+    "prefix": "lv:table"
+  },
+  "lv:table and guarded": {
+    "body": [
+      "/**",
+      " * The table associated with the model.",
+      " *",
+      " * @var string",
+      " */",
+      "protected \\$table = '${1}';",
+      "",
+      "/**",
+      " * The attributes that aren't mass assignable.",
+      " *",
+      " * @var array",
+      " */",
+      "protected \\$guarded = ['id'];"
+    ],
+    "prefix": "lv:table and guarded"
+  },
+  "lvcontroller:delete": {
+    "body": [
+      "/**",
+      " * Delete function.",
+      " *",
+      " * @return object spresponse",
+      " */",
+      "public function delete(${2:} ${1:})",
+      "{",
+      "    try {",
+      "        ${1:}->delete();",
+      "",
+      "        return SpHelper::response(true, __('Menghapus :title', ['title' => \\$this->model_title]));",
+      "    } catch (\\Exception \\$e) {",
+      "        /* throw \\$e; */",
+      "        return SpHelper::response(false, __('Gagal mengahpus :title kemungkinan terdapat data yang berkaitan dengan item tersebut', ['title' => \\$this->model_title]));",
+      "    }",
+      "}"
+    ],
+    "prefix": "lvcontroller:delete"
+  },
+  "lvmodel:Attribute": {
+    "body": [
+      "protected function ${1}(): Attribute",
+      "{",
+      "    return Attribute::make(",
+      "        get: fn() => ${2};",
+      "    )",
+      "}"
+    ],
+    "prefix": "lvmodel:Attribute"
+  },
+  "lvroute:group": {
+    "body": [
+      "Route::group(",
+      "    [",
+      "        'prefix' => '${1:}',",
+      "        'as'     => '${1:}.',",
+      "    ],",
+      "    function () {",
+      "        Route::get('datatable', [${2:}::class, 'datatable'])->name('datatable');",
+      "        Route::get('show/{${1:}}', [${2:}::class, 'show'])->name('show');",
+      "        Route::post('action', [${2:}::class, 'action'])->name('action')->middleware();",
+      "        Route::delete('delete/{${1:}}', [${2:}::class, 'delete'])->name('delete')->middleware();",
+      "    }",
+      ");"
+    ],
+    "prefix": "lvroute:group"
+  },
+  "sekolahku:controller-action-function": {
+    "body": [
+      "public function action(Request \\$request)",
+      "{",
+      "    \\$request->validate([",
+      "        'name' => 'required',",
+      "    ]);",
+      "",
+      "    return SpHelper::response(true, __('Sukses Menyimpan Transaksi'));",
+      "}"
+    ],
+    "prefix": "sekolahku:controller-action-function"
+  },
+  "sekolahku:controller-delete-function": {
+    "body": [
+      "public function delete(${1:} ${2:})",
+      "{",
+      "    try {",
+      "        ${2:}->delete();",
+      "",
+      "        return SpHelper::response(true, __('Menghapus :title', ['title' => \\$this->model_title]));",
+      "    } catch (\\Exception \\$e) {",
+      "        /* throw \\$e; */",
+      "        return SpHelper::response(false, __('Gagal mengahpus :title kemungkinan terdapat data yang berkaitan dengan item tersebut', ['title' => \\$this->model_title]));",
+      "    }",
+      "}"
+    ],
+    "prefix": "sekolahku:controller-delete-function"
+  },
+  "sekolahku:meta": {
+    "body": [
+      "['${1:}', [",
+      "    'title'    => __('${2:}'),",
+      "    'subtitle' => __('${3:}'),",
+      "]],"
+    ],
+    "prefix": "sekolahku:meta"
+  },
+  "sekolahku:route-group": {
+    "body": [
+      "Route::group(",
+      "    [",
+      "        'prefix'     => '${1:}',",
+      "        'as'         => '${1:}.',",
+      "        'middleware' => 'can:show ${1:}',",
+      "    ],",
+      "    function () {",
+      "        Route::get('datatable', [${2:}::class, 'datatable'])->name('datatable');",
+      "        Route::get('show/{${1:}}', [${2:}::class, 'show'])->name('show');",
+      "        Route::get('excel', [${2:}::class, 'excel'])->name('excel');",
+      "        Route::post('action', [${2:}::class, 'action'])->name('action')->middleware('permission:create ${1:}|edit ${1:}');",
+      "        Route::delete('delete/{${1:}}', [${2:}::class, 'delete'])->name('delete')->middleware('can:delete ${1:}');",
+      "    }",
+      ");"
+    ],
+    "prefix": "sekolahku:route-group"
+  },
+  "sekolahku:seed-permissions": {
+    "body": [
+      "\\$categories = [",
+      "    [",
+      "        'name'        => 'Buku Tabungan',",
+      "        'permissions' => [",
+      "            [",
+      "                'name'        => 'show savings book student',",
+      "                'description' => 'Melihat data buku tabungan siswa',",
+      "            ],",
+      "",
+      "            [",
+      "                'name'        => 'create savings book student',",
+      "                'description' => 'Menginput data buku tabungan siswa',",
+      "            ],",
+      "            [",
+      "                'name'        => 'edit savings book student',",
+      "                'description' => 'Mengedit data buku tabungan siswa',",
+      "            ],",
+      "            [",
+      "                'name'        => 'delete savings book student',",
+      "                'description' => 'Menghapus data buku tabungan siswa',",
+      "            ],",
+      "        ],",
+      "    ],",
+      "];",
+      "",
+      "seedPermissions('SavingsBook', \\$categories);"
+    ],
+    "prefix": "sekolahku:seed-permissions"
+  },
+  "seolahku::controller-excel-function": {
+    "body": [
+      "public function excel(Request \\$request)",
+      "    {",
+      "        set_time_limit(0);",
+      "",
+      "        \\$config = [",
+      "            'title'        => __('${1:}'),",
+      "            'description'  => '',",
+      "            'show_example' => false,",
+      "        ];",
+      "",
+      "        \\$data = [",
+      "            'query'    => \\$this->queryBuilder(),",
+      "        ];",
+      "",
+      "        return Excel::download(new TransactionExport((object) \\$config, \\$data), __('${2:} .xlsx'));",
+      "    }"
+    ],
+    "prefix": "sekolahku:controller-excel-function"
+  },
+  "translatedFormat": {
+    "body": "translatedFormat('j F Y')",
+    "prefix": "translatedFormat"
+  },
+  "trycatch:with-database-transaction": {
+    "body": [
+      "DB::beginTransaction();",
+      "try {",
+      "    ${1}",
+      "    DB::commit();",
+      "} catch (\\Throwable \\$th) {",
+      "    DB::rollBack();",
+      "    //throw \\$th;",
+      "    Alert::makeThrowable(\\$th);",
+      "}"
+    ],
+    "prefix": "trycatch:with-database-transaction"
+  }
+}

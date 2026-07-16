@@ -1,0 +1,84 @@
+{
+  "contributes": {
+    "snippets": [
+      {
+        "language": [
+          "javascript",
+          "javascriptreact",
+          "vue",
+          "svelte",
+          "typescript",
+          "javascriptreact"
+        ],
+        "path": "./javascript.json"
+      },
+      {
+        "language": "vue",
+        "path": "./vue.json"
+      },
+      {
+        "language": "pug",
+        "path": "./pug.json"
+      },
+      {
+        "language": "php",
+        "path": "./php.json"
+      },
+      {
+        "language": "xml",
+        "path": "./xml.json"
+      },
+      {
+        "language": "blade",
+        "path": "./blade.json"
+      },
+      {
+        "language": [
+          "markdown"
+        ],
+        "path": "./markdown.json"
+      },
+      {
+        "language": [
+          "html"
+        ],
+        "path": "./html.json"
+      },
+      {
+        "language": [
+          "lua"
+        ],
+        "path": "./lua.json"
+      },
+      {
+        "language": [
+          "json"
+        ],
+        "path": "./json.json"
+      },
+      {
+        "language": [
+          "dosini"
+        ],
+        "path": "./dosini.json"
+      },
+      {
+        "language": [
+          "typescriptreact"
+        ],
+        "path": "./typescriptreact.json"
+      },
+      {
+        "language": [
+          "dart"
+        ],
+        "path": "./dart.json"
+      }
+    ]
+  },
+  "engines": {
+    "vscode": "^1.11.0"
+  },
+  "name": "snippsets",
+  "version": "1.0.0"
+}
