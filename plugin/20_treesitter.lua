@@ -1,5 +1,4 @@
-require("arborist").setup({
-  install_popular = false,
+require("tree-sitter-manager").setup({
   ensure_installedd = {
     "lua",
     "markdown_inline",

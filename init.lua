@@ -21,6 +21,9 @@ local plugins = {
   { src = 'https://github.com/mrjones2014/smart-splits.nvim' },
   {
     src = 'https://github.com/ingur/floatty.nvim'
+  },
+  {
+    src  = 'https://github.com/romus204/tree-sitter-manager.nvim'
   }
 }
 

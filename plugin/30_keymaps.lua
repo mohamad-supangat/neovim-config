@@ -29,7 +29,7 @@ keymap("n", "<leader>cF", function()
 end, { desc = "Copy Full File Path to clipboard" })
 
 
-keymap("n", "<Leader>uu", "<Cmd>DepsUpdate<CR>", { desc = "Update Plugins" })
+keymap("n", "<Leader>uu", "<Cmd>Pack<CR>", { desc = "Update Plugins" })
 
 keymap("n", "<Leader>q", ":q<CR>", { desc = "Exit neovim" })
 
@@ -110,4 +110,3 @@ keymap("v", "<Tab>", ">gv", { noremap = true, silent = true, desc = "Indent >" }
 keymap("v", "<S-Tab>", "<gv", { noremap = true, silent = true, desc = "Indent <" })
 keymap("v", ">", ">gv", { noremap = true, silent = true, desc = "Indent >" })
 keymap("v", "<", "<gv", { noremap = true, silent = true, desc = "Indent <" })
-

@@ -9,6 +9,10 @@
       "rev": "ba6c7cd828474084001d131fc0160fcb3bbef6d2",
       "src": "https://github.com/ingur/floatty.nvim"
     },
+    "grug-far.nvim": {
+      "rev": "1cc080f55706b38aabfa97d40acb6adf59ac4a5a",
+      "src": "https://github.com/MagicDuck/grug-far.nvim"
+    },
     "mini.nvim": {
       "rev": "9459d7f41ae77d909579dab0aea2bdd3210fac9f",
       "src": "https://github.com/nvim-mini/mini.nvim"
@@ -32,6 +36,10 @@
     "supermaven-nvim": {
       "rev": "07d20fce48a5629686aefb0a7cd4b25e33947d50",
       "src": "https://github.com/supermaven-inc/supermaven-nvim"
+    },
+    "tree-sitter-manager.nvim": {
+      "rev": "09e3a321eea8100cacd2e759c3a6c9d350295fab",
+      "src": "https://github.com/romus204/tree-sitter-manager.nvim"
     },
     "vim-snippets": {
       "rev": "ededcf7581962ee616cadab360d5966f3307f11a",

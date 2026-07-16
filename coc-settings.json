@@ -1,4 +1,12 @@
 {
+  "languageserver": {
+    "phpantomlsp": {
+      "command": "phpantomlsp",
+      "args": ["--language-server"],
+      "filetypes": ["php"],
+      "rootPatterns": ["composer.json", ".git"]
+    }
+  },
   "explorer.icon.expanded": "▾",
   "explorer.icon.collapsed": "▸",
   /* "explorer.width": 80, */
