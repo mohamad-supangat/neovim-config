@@ -1,5 +1,7 @@
 vim.cmd('colorscheme miniwinter')
 
+local keymap = vim.keymap.set
+
 require('mini.basics').setup({
   options = { basic = false },
   autocommands = {
@@ -137,7 +139,6 @@ miniclue.setup({
   },
 })
 -- keymap
-local keymap = vim.keymap.set
 
 keymap('n', '<C-p>', function()
   require('mini.pick').builtin.cli({
