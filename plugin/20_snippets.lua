@@ -1,3 +1,5 @@
+local customSnippetPath = vim.fn.stdpath('config') .. '/after/snippets'
+
 -- require("scissors").setup({
 --   snippetDir = customSnippetPath
 -- })

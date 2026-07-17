@@ -27,3 +27,16 @@ require('tree-sitter-manager').setup({
     'yaml',
   },
 })
+
+-- auto start treesitter
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = '*',
+  callback = function()
+    -- Check if a parser exists for the current file type before starting
+    local lang = vim.treesitter.language.get_lang(vim.bo.filetype)
+    if lang and vim.treesitter.language.add(lang) then
+      pcall(vim.treesitter.start)
+      vim.bo.autoindent = true
+    end
+  end,
+})

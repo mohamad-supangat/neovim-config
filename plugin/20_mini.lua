@@ -1,7 +1,5 @@
 vim.cmd('colorscheme miniwinter')
 
-local keymap = vim.keymap.set
-
 require('mini.basics').setup({
   options = { basic = false },
   autocommands = {
@@ -22,7 +20,6 @@ require('mini.icons').setup()
 require('mini.icons').mock_nvim_web_devicons()
 require('mini.notify').setup()
 require('mini.tabline').setup()
-require('mini.clue').setup()
 require('mini.files').setup({
   use_as_default_explorer = true,
   content = {
@@ -104,8 +101,44 @@ require('mini.pick').setup({
 require('mini.surround').setup()
 require('mini.splitjoin').setup()
 require('mini.trailspace').setup()
+local miniclue = require('mini.clue')
+miniclue.setup({
+  triggers = {
+    -- Leader triggers
+    { mode = { 'n', 'x' }, keys = '<Leader>' },
+    -- `[` and `]` keys
+    { mode = 'n', keys = '[' },
+    { mode = 'n', keys = ']' },
+    -- Built-in completion
+    { mode = 'i', keys = '<C-x>' },
+    -- `g` key
+    { mode = { 'n', 'x' }, keys = 'g' },
+    -- Marks
+    { mode = { 'n', 'x' }, keys = "'" },
+    { mode = { 'n', 'x' }, keys = '`' },
+    -- Registers
+    { mode = { 'n', 'x' }, keys = '"' },
+    { mode = { 'i', 'c' }, keys = '<C-r>' },
+    -- Window commands
+    { mode = 'n', keys = '<C-w>' },
+    -- `z` key
+    { mode = { 'n', 'x' }, keys = 'z' },
+  },
 
+  clues = {
+    -- Enhance this by adding descriptions for <Leader> mapping groups
+    miniclue.gen_clues.square_brackets(),
+    miniclue.gen_clues.builtin_completion(),
+    miniclue.gen_clues.g(),
+    miniclue.gen_clues.marks(),
+    miniclue.gen_clues.registers(),
+    miniclue.gen_clues.windows(),
+    miniclue.gen_clues.z(),
+  },
+})
 -- keymap
+local keymap = vim.keymap.set
+
 keymap('n', '<C-p>', function()
   require('mini.pick').builtin.cli({
     command = {
@@ -132,7 +165,6 @@ keymap('n', '<c-n>', function()
     MiniFiles.reveal_cwd()
   end
 end, { desc = 'Open file picker' })
-
 keymap('n', '<Leader>ep', function()
   MiniPick.builtin.files({}, {
     source = {
@@ -141,7 +173,6 @@ keymap('n', '<Leader>ep', function()
     },
   })
 end, { desc = 'Select Neovim config file' })
-
 keymap('n', '<c-z>', '<Cmd>lua MiniMisc.zoom()<CR>', { desc = 'Zoom toggle / Zen Mode' })
-
-vim.keymap.set('n', '<Leader>nn', '<Cmd>lua MiniNotify.show_history()<CR>', { desc = 'Notifications' })
+keymap('n', '<Leader>nn', '<Cmd>lua MiniNotify.show_history()<CR>', { desc = 'Notifications' })
+keymap('n', '<Leader>fb', '<Cmd>Pick buffers<CR>', { desc = 'Pick Buffers' })
