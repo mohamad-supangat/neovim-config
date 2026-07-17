@@ -103,6 +103,76 @@ require('mini.pick').setup({
 require('mini.surround').setup()
 require('mini.splitjoin').setup()
 require('mini.trailspace').setup()
+
+local function get_macro_status()
+  local recording_register = vim.fn.reg_recording()
+  if recording_register == '' then
+    return ''
+  end
+  return '󰑊 Recording @' .. recording_register
+end
+require('mini.statusline').setup({
+  content = {
+    active = function()
+      local mode, mode_hl = MiniStatusline.section_mode({ trunc_width = 120 })
+      local git = MiniStatusline.section_git({ trunc_width = 75 })
+      local diag = MiniStatusline.section_diagnostics({ trunc_width = 75 })
+      local filename = MiniStatusline.section_filename({ trunc_width = 50 })
+      local fileinfo = MiniStatusline.section_fileinfo({ trunc_width = 120 })
+      local location = MiniStatusline.section_location({ trunc_width = 75 })
+      local macro = get_macro_status()
+
+      return MiniStatusline.combine_groups({
+        { hl = mode_hl, strings = { mode } },
+        { hl = 'MiniStatuslineModeReplace', strings = { macro } },
+
+        {
+          hl = 'MiniStatuslineDevinfo',
+          strings = {
+            -- git,
+            diag,
+          },
+        },
+        '%<',
+        { hl = 'MiniStatuslineFilename', strings = { filename } },
+        '%=',
+        -- { hl = "MiniStatuslineFileinfo", strings = { fileinfo } },
+        -- { hl = mode_hl, strings = { location } },
+      })
+    end,
+  },
+})
+local starter = require('mini.starter')
+starter.setup({
+  evaluate_single = true,
+  items = {
+    {
+      name = 'Config: init.lua',
+      action = 'e ~/.config/nvim/init.lua',
+      section = 'Nvim',
+    },
+    {
+      name = 'Snippets: package.json',
+      action = 'e ~/projects/snippets/package.json',
+      section = 'Nvim',
+    },
+    {
+      name = 'Obsidian Vault',
+      action = 'e ~/Documents/Obsidian/',
+      section = 'Nvim',
+    },
+    starter.sections.sessions(5, true),
+    starter.sections.builtin_actions(),
+    starter.sections.recent_files(10, false),
+    -- starter.sections.recent_files(10, true),
+  },
+  content_hooks = {
+    starter.gen_hook.adding_bullet(),
+    starter.gen_hook.aligning('center', 'center'),
+    starter.gen_hook.indexing('all', { 'Builtin actions' }),
+    starter.gen_hook.padding(10, 0),
+  },
+})
 local miniclue = require('mini.clue')
 miniclue.setup({
   triggers = {

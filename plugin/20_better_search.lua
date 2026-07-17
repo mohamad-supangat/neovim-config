@@ -7,7 +7,6 @@ keymap({ 'n', 'x', 'o' }, 'N', search.stable_previous)
 
 -- Search current word without moving.
 keymap('n', '!', search.current_word)
-keymap('n', '/', search.current_word)
 
 -- Search selected text in visual mode
 keymap('x', '!', search.in_place) -- search selection without moving

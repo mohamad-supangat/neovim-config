@@ -1,7 +1,13 @@
 require('mason').setup()
-require('mason-lspconfig').setup()
+require('mason-lspconfig').setup({
+  automatic_enable = true,
+})
 
 local nuls = require('null-ls')
+
+vim.lsp.enable({
+  'dartls',
+})
 
 nuls.setup({
   cache = false,
