@@ -3,42 +3,40 @@ require('mason-lspconfig').setup({
   automatic_enable = true,
 })
 
-local nuls = require('null-ls')
+local null_ls = require('null-ls')
 
 vim.lsp.enable({
   'dartls',
 })
 
-nuls.setup({
+null_ls.setup({
   cache = false,
   debug = false,
   temp_dir = '/tmp',
   -- on_attach = require("lsp.handlers").on_attach,
   sources = {
-    nuls.builtins.completion.tags,
-    nuls.builtins.formatting.blade_formatter,
-    -- nuls.builtins.completion.spell,
-    -- nuls.builtins.completion.nvim_snippets,
-    -- nuls.builtins.completion.luasnip,
-    -- nuls.builtins.formatting.biome,
-    nuls.builtins.formatting.phpcsfixer.with({
+    null_ls.builtins.completion.tags,
+    null_ls.builtins.completion.spell,
+    -- null_ls.builtins.formatting.biome,
+    null_ls.builtins.formatting.blade_formatter,
+    null_ls.builtins.formatting.fish_indent,
+    null_ls.builtins.formatting.dart_format,
+    null_ls.builtins.formatting.phpcsfixer.with({
       condition = function(utils)
-        return utils.root_has_file({ '.php_cs.dist', '.php_cs', 'composer.json' })
+        return utils.root_has_file({ '.php_cs.dist', '.php_cs', 'composer.json', '.rootdir' })
       end,
     }),
-    nuls.builtins.formatting.prettier.with({
+    null_ls.builtins.formatting.prettier.with({
       extra_filetypes = { 'toml', 'css', 'json5', 'vue', 'jsonc' },
       condition = function(utils)
         return utils.root_has_file({ '.prettierrc' })
       end,
     }),
 
-    nuls.builtins.formatting.buf,
-    nuls.builtins.diagnostics.buf,
-
-    nuls.builtins.diagnostics.fish,
-    -- nuls.builtins.diagnostics.editorconfig_checker,
-    nuls.builtins.hover.dictionary,
+    null_ls.builtins.diagnostics.fish,
+    null_ls.builtins.diagnostics.phpcs,
+    null_ls.builtins.diagnostics.editorconfig_checker,
+    null_ls.builtins.hover.dictionary,
   },
 })
 
