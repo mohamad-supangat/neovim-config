@@ -61,6 +61,10 @@
       "rev": "09e3a321eea8100cacd2e759c3a6c9d350295fab",
       "src": "https://github.com/romus204/tree-sitter-manager.nvim"
     },
+    "vim-polyglot": {
+      "rev": "f061eddb7cdcc614c8406847b2bfb53099832a4e",
+      "src": "https://github.com/vim-polyglot/vim-polyglot"
+    },
     "vim-snippets": {
       "rev": "ededcf7581962ee616cadab360d5966f3307f11a",
       "src": "https://github.com/honza/vim-snippets"
