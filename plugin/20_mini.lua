@@ -20,7 +20,7 @@ require('mini.basics').setup({
 require('mini.bufremove').setup()
 require('mini.icons').setup()
 require('mini.icons').mock_nvim_web_devicons()
-require('mini.notify').setup()
+-- require('mini.notify').setup()
 require('mini.tabline').setup()
 require('mini.files').setup({
   use_as_default_explorer = true,

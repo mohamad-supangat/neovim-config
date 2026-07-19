@@ -1,7 +1,7 @@
 local plugins = {
   { src = 'https://codeberg.org/cryptomilk/nvim-pack-ui' },
-  { src = 'https://github.com/vim-polyglot/vim-polyglot' },
   { src = 'https://github.com/nvim-lua/plenary.nvim' },
+
   { src = 'https://github.com/nvim-mini/mini.nvim' },
   { src = 'https://github.com/honza/vim-snippets' },
   { src = 'https://github.com/supermaven-inc/supermaven-nvim' },
@@ -16,6 +16,8 @@ local plugins = {
   { src = 'https://github.com/ingur/floatty.nvim' },
 
   -- treesitter
+  -- { src = 'https://github.com/vim-polyglot/vim-polyglot' },
+
   { src = 'https://github.com/nvim-treesitter/nvim-treesitter' },
   { src = 'https://github.com/windwp/nvim-ts-autotag' },
 
