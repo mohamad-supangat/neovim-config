@@ -14,7 +14,10 @@ local plugins = {
   { src = 'https://github.com/mrjones2014/smart-splits.nvim' },
   { src = 'https://github.com/backdround/improved-search.nvim' },
   { src = 'https://github.com/ingur/floatty.nvim' },
-  { src = 'https://github.com/romus204/tree-sitter-manager.nvim' },
+
+  -- treesitter
+  { src = 'https://github.com/nvim-treesitter/nvim-treesitter' },
+  { src = 'https://github.com/windwp/nvim-ts-autotag' },
 
   -- lsp native
   { src = 'https://github.com/neovim/nvim-lspconfig' },

@@ -50,5 +50,20 @@ keymap('n', 'rn', '<Cmd>lua vim.lsp.buf.rename()<CR>', { desc = 'Rename' })
 keymap('n', 'gr', '<Cmd>lua vim.lsp.buf.references()<CR>', { desc = 'References' })
 keymap('n', 'gd', '<Cmd>lua vim.lsp.buf.definition()<CR>', { desc = 'Source definition' })
 keymap('n', 'go', '<Cmd>lua vim.lsp.buf.type_definition()<CR>', { desc = 'Type definition' })
-keymap('n', '<Leader>fm', '<Cmd>lua vim.lsp.buf.format()<CR>', { desc = 'Format' })
+keymap('n', '<Leader>fm', function()
+  -- 1. Format using everything EXCEPT null-ls
+  vim.lsp.buf.format({
+    filter = function(client)
+      return client.name ~= 'null-ls'
+    end,
+    async = false,
+  })
+  -- 2. Format using ONLY null-ls
+  vim.lsp.buf.format({
+    filter = function(client)
+      return client.name == 'null-ls'
+    end,
+    async = false,
+  })
+end, { desc = 'Format' })
 keymap('x', '<Leader>fm', '<Cmd>lua vim.lsp.buf.format()<CR>', { desc = 'Format selection' })

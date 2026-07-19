@@ -1,10 +1,5 @@
 {
   "plugins": {
-    "coc.nvim": {
-      "rev": "d1689a4876305e5fc6691910c8ee6f1eb5da2219",
-      "src": "https://github.com/neoclide/coc.nvim",
-      "version": "'release'"
-    },
     "floatty.nvim": {
       "rev": "ba6c7cd828474084001d131fc0160fcb3bbef6d2",
       "src": "https://github.com/ingur/floatty.nvim"
@@ -41,6 +36,14 @@
       "rev": "f36e3cfd4859052b5751c681edb80feed0b87966",
       "src": "https://codeberg.org/cryptomilk/nvim-pack-ui"
     },
+    "nvim-treesitter": {
+      "rev": "24977147550d53589e53b874ec75e14e4fbc304e",
+      "src": "https://github.com/nvim-treesitter/nvim-treesitter"
+    },
+    "nvim-ts-autotag": {
+      "rev": "88c1453db4ba7dd24131086fe51fdf74e587d275",
+      "src": "https://github.com/windwp/nvim-ts-autotag"
+    },
     "plenary.nvim": {
       "rev": "74b06c6c75e4eeb3108ec01852001636d85a932b",
       "src": "https://github.com/nvim-lua/plenary.nvim"
@@ -56,10 +59,6 @@
     "supermaven-nvim": {
       "rev": "07d20fce48a5629686aefb0a7cd4b25e33947d50",
       "src": "https://github.com/supermaven-inc/supermaven-nvim"
-    },
-    "tree-sitter-manager.nvim": {
-      "rev": "09e3a321eea8100cacd2e759c3a6c9d350295fab",
-      "src": "https://github.com/romus204/tree-sitter-manager.nvim"
     },
     "vim-polyglot": {
       "rev": "f061eddb7cdcc614c8406847b2bfb53099832a4e",
