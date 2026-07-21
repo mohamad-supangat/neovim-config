@@ -49,6 +49,7 @@ require('conform').setup({
 })
 
 function format()
+  vim.lsp.buf.format({ async = true })
   require('conform').format({ lsp_fallback = true, async = true })
 end
 

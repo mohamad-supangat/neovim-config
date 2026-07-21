@@ -40,14 +40,14 @@ require('nvim-ts-autotag').setup({
   },
 })
 -- -- auto start treesitter
--- vim.api.nvim_create_autocmd('FileType', {
---   pattern = '*',
---   callback = function()
---     -- Check if a parser exists for the current file type before starting
---     local lang = vim.treesitter.language.get_lang(vim.bo.filetype)
---     if lang and vim.treesitter.language.add(lang) then
---       pcall(vim.treesitter.start)
---       vim.bo.autoindent = true
---     end
---   end,
--- })
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = '*',
+  callback = function()
+    local lang = vim.treesitter.language.get_lang(vim.bo.filetype)
+    if lang and vim.treesitter.language.add(lang) then
+      pcall(vim.treesitter.start)
+      vim.bo.autoindent = true
+      vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+    end
+  end,
+})
