@@ -1,34 +1,10 @@
-require('render-markdown').setup({
-  render_modes = true,
-  anti_conceal = { enabled = true },
-  completions = { lsp = { enabled = true } },
-  heading = { position = 'inline' },
-  checkbox = {
-    render_modes = true,
-    bullet = false,
-    -- left_pad = 0,
-    -- right_pad = 1,
-    unchecked = {
-      icon = '󰄱 ',
-      highlight = 'RenderMarkdownUnchecked',
-      scope_highlight = nil,
-    },
-    checked = {
-      -- icon = "󰱒 ",
-      icon = '󰄲 ',
-      highlight = 'RenderMarkdownChecked',
-      scope_highlight = nil,
-    },
-    custom = {
-      todo = {
-        raw = '[-]',
-        rendered = '󰥔 ',
-        highlight = 'RenderMarkdownTodo',
-        scope_highlight = nil,
-      },
-    },
-    scope_priority = nil,
-  },
+require('touchup').setup({
+  bullets = { enabled = true, icons = { '✸', '✿', '✦', '✧' } },
+  checkboxes = { enabled = true },
+  code_blocks = { enabled = true },
+  markers = { enabled = true },
+  quotes = { enabled = true },
+  enter = { enabled = true },
 })
 
 local obsidianPath = vim.fn.expand('~/Documents/Obsidian/')

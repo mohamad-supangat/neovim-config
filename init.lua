@@ -11,16 +11,15 @@ local plugins = {
   --   src = 'https://github.com/neoclide/coc.nvim',
   --   version = "release"
   -- },
-  { src = 'https://github.com/MeanderingProgrammer/render-markdown.nvim' },
   { src = 'https://github.com/mrjones2014/smart-splits.nvim' },
   { src = 'https://github.com/backdround/improved-search.nvim' },
   { src = 'https://github.com/ingur/floatty.nvim' },
 
   -- treesitter
   -- { src = 'https://github.com/vim-polyglot/vim-polyglot' },
-
   { src = 'https://github.com/nvim-treesitter/nvim-treesitter' },
   { src = 'https://github.com/windwp/nvim-ts-autotag' },
+  { src = 'https://github.com/noisesfromspace/touchup.nvim' },
 
   -- lsp native
   { src = 'https://github.com/neovim/nvim-lspconfig' },

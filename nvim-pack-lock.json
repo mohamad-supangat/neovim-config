@@ -32,6 +32,10 @@
       "rev": "a35f08f63b73f0ffac045cd175fb2a22e167c39c",
       "src": "https://github.com/nvim-mini/mini.nvim"
     },
+    "none-ls.nvim": {
+      "rev": "01f8e62ea11603e59ad9ff7afcfa94fd183f76d6",
+      "src": "https://github.com/nvimtools/none-ls.nvim"
+    },
     "nvim-lspconfig": {
       "rev": "b89138d9af0a96e6048e202a15765fc6b6416bd4",
       "src": "https://github.com/neovim/nvim-lspconfig"
@@ -63,6 +67,14 @@
     "supermaven-nvim": {
       "rev": "07d20fce48a5629686aefb0a7cd4b25e33947d50",
       "src": "https://github.com/supermaven-inc/supermaven-nvim"
+    },
+    "touchup.nvim": {
+      "rev": "da808d941cef641127ae92fa34eff48952b26112",
+      "src": "https://github.com/noisesfromspace/touchup.nvim"
+    },
+    "vim-polyglot": {
+      "rev": "f061eddb7cdcc614c8406847b2bfb53099832a4e",
+      "src": "https://github.com/vim-polyglot/vim-polyglot"
     },
     "vim-snippets": {
       "rev": "ededcf7581962ee616cadab360d5966f3307f11a",

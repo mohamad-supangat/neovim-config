@@ -48,11 +48,7 @@
     "prefix": "slide:new-title"
   },
   "slide:split": {
-    "body": [
-      "<split gap=\"5\" even left=\"2\">",
-      "${1:}",
-      "</split>"
-    ],
+    "body": ["<split gap=\"5\" even left=\"2\">", "${1:}", "</split>"],
     "prefix": "slide:split"
   }
 }
