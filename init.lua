@@ -27,6 +27,9 @@ local plugins = {
   { src = 'https://github.com/mason-org/mason-lspconfig.nvim' },
   { src = 'https://github.com/stevearc/conform.nvim' },
   -- { src = 'https://github.com/nvimtools/none-ls.nvim' },
+
+  { src = 'https://github.com/olimorris/codecompanion.nvim' },
+  { src = 'https://github.com/ravitemer/codecompanion-history.nvim' },
 }
 
 vim.pack.add(plugins)
