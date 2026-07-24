@@ -39,6 +39,25 @@ require('nvim-ts-autotag').setup({
     ['html.handlebars'] = 'html',
   },
 })
+
+require('nvim_context_vt').setup({
+  enabled = true,
+  prefix = '',
+  priority = 1000,
+  -- Override the internal highlight group name
+  -- Default: 'ContextVt'
+  -- highlight = 'CustomContextVt',
+
+  disable_ft = { 'markdown' },
+  disable_virtual_lines = false,
+
+  disable_virtual_lines_ft = { 'yaml' },
+
+  min_rows = 1,
+
+  min_rows_ft = {},
+})
+
 -- -- auto start treesitter
 local isnt_installed = function(lang)
   return #vim.api.nvim_get_runtime_file('parser/' .. lang .. '.*', false) == 0
@@ -57,7 +76,7 @@ for _, lang in ipairs(languages) do
 end
 local ts_start = function(ev)
   vim.treesitter.start(ev.buf)
-  ev.buf.autoindent = true
-  ev.buf.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+  vim.bo.autoindent = true
+  vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
 end
 Config.new_autocmd('FileType', filetypes, ts_start, 'Start tree-sitter')
