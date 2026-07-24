@@ -12,6 +12,12 @@ require('mini.completion').setup({
     -- process_items = process_items,
   },
 })
+
+local on_attach = function(ev)
+  vim.bo[ev.buf].omnifunc = 'v:lua.MiniCompletion.completefunc_lsp'
+end
+Config.new_autocmd('LspAttach', nil, on_attach, "Set 'omnifunc'")
+
 local map_multistep = require('mini.keymap').map_multistep
 
 map_multistep('i', '<Tab>', { 'pmenu_next' })
