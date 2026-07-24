@@ -20,6 +20,10 @@
       "rev": "6cd7280adead7f586db6fccbd15d2cac7e2188b9",
       "src": "https://github.com/rafamadriz/friendly-snippets"
     },
+    "goose.nvim": {
+      "rev": "c16133a0c4e3fb2b733887ebdd6d0dff67af31e1",
+      "src": "https://github.com/azorng/goose.nvim"
+    },
     "grug-far.nvim": {
       "rev": "0f6a5d0d7a70659b11bbcd6b3673ee0fe61b6024",
       "src": "https://github.com/MagicDuck/grug-far.nvim"
