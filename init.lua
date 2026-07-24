@@ -18,6 +18,7 @@ local plugins = {
   -- treesitter
   -- { src = 'https://github.com/vim-polyglot/vim-polyglot' },
   { src = 'https://github.com/nvim-treesitter/nvim-treesitter' },
+  { src = 'https://github.com/nvim-treesitter/nvim-treesitter-textobjects' },
   { src = 'https://github.com/windwp/nvim-ts-autotag' },
   { src = 'https://github.com/noisesfromspace/touchup.nvim' },
 
