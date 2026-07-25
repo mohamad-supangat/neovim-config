@@ -34,7 +34,7 @@ require('goose').setup({
       next_message = ']]', -- Navigate to next message in the conversation
       prev_message = '[[', -- Navigate to previous message in the conversation
       mention_file = '@', -- Pick a file and add to context. See File Mentions section
-      toggle_pane = '<tab>', -- Toggle between input and output panes
+      toggle_pane = '<C-tab>', -- Toggle between input and output panes
       prev_prompt_history = '<up>', -- Navigate to previous prompt in history
       next_prompt_history = '<down>', -- Navigate to next prompt in history
     },
