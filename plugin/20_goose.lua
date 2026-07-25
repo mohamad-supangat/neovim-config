@@ -50,7 +50,7 @@ require('goose').setup({
     display_goose_mode = true, -- Display mode on top winbar: auto|chat|approve|smart_approve
   },
   providers = {},
-  system_instructions = '',
+  system_instructions = 'kamu adalah sebuah pustaka pemograman paling lengkap, bantu saya sebaik mungkin, balas dengan bahasa indonesi secara singkat dan jelas tanpa perlu mendeskripsikan setiap langkah',
 })
 
 -- vim.keymap.set({ 'n', 'x' }, '<A-b>', '<cmd>CodeCompanionChat Toggle<CR>', { desc = 'Toggle CodeCompanion Chat' })
