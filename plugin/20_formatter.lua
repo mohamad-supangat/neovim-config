@@ -49,8 +49,8 @@ require('conform').setup({
 })
 
 function format()
+  require('conform').format({ lsp_fallback = false, async = false })
   vim.lsp.buf.format({ async = false })
-  require('conform').format({ lsp_fallback = true, async = true })
 end
 
 local keymap = vim.keymap.set
