@@ -1,4 +1,5 @@
 vim.o.pumblend = 5
+vim.opt.completeopt = 'fuzzy,menuone,noselect,popup'
 
 require('mini.cmdline').setup()
 require('mini.completion').setup({
