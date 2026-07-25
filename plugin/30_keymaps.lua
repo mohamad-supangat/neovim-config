@@ -1,7 +1,7 @@
 local keymap = vim.keymap.set
 
 keymap({ 'i', 't', 'v', 'c' }, '<A-BS>', '<C-W>', { desc = 'delete word' })
-vim.keymap.set("n", "<Esc><Esc>", ":nohl<CR>", { noremap = true, silent = true, desc = "Remove Search highlighting" })
+vim.keymap.set('n', '<Esc><Esc>', ':nohl<CR>', { noremap = true, silent = true, desc = 'Remove Search highlighting' })
 
 keymap('v', '<BS>', '"_d', { desc = 'Delete without cut /copy to buffer clipboard' })
 

@@ -16,7 +16,7 @@ require('goose').setup({
       goose_mode_auto = '<leader>gma', -- Set goose mode to `auto`. (Default mode with full agent capabilities)
       goose_mode_approve = '<leader>gmp', -- Set goose mode to `approve`. (Manual approval for all tool usage)
       goose_mode_smart_approve = '<leader>gms', -- Set goose mode to `smart_approve`. (Risk-based tool usage approval)
-      configure_provider = '<leader>gp', -- Quick provider and model switch from predefined list
+      configure_provider = '<leader>gop', -- Quick provider and model switch from predefined list
       open_config = '<leader>g.', -- Open goose config file
       inspect_session = '<leader>g?', -- Inspect current session as JSON
       diff_open = '<leader>gd', -- Opens a diff tab of a modified file since the last goose prompt
@@ -28,13 +28,13 @@ require('goose').setup({
     },
     window = {
       submit = '<cr>', -- Submit prompt (normal mode)
-      submit_insert = '<cr>', -- Submit prompt (insert mode)
+      submit_insert = '<A-cr>', -- Submit prompt (insert mode)
       close = '<esc>', -- Close UI windows
       stop = '<C-c>', -- Stop goose while it is running
       next_message = ']]', -- Navigate to next message in the conversation
       prev_message = '[[', -- Navigate to previous message in the conversation
       mention_file = '@', -- Pick a file and add to context. See File Mentions section
-      toggle_pane = '<C-tab>', -- Toggle between input and output panes
+      toggle_pane = '<S-tab>', -- Toggle between input and output panes
       prev_prompt_history = '<up>', -- Navigate to previous prompt in history
       next_prompt_history = '<down>', -- Navigate to next prompt in history
     },

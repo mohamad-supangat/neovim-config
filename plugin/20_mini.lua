@@ -210,26 +210,7 @@ miniclue.setup({
 })
 -- keymap
 
-keymap('n', '<C-p>', function()
-  require('mini.pick').builtin.cli({
-    command = {
-      'rg',
-      '--files',
-      '--hidden',
-      '-uu',
-      '-g',
-      '!/**/.git',
-      '-g',
-      '!/**/node_modules',
-      '-g',
-      '!/vendor',
-      '-g',
-      '!/public/build',
-      '-g',
-      '!*.{jpg,jpeg,png,gif,bmp,tiff,mov,mp4,avi,mpeg,webm,pdf,doc,docx,mp3,cache,gitkeep,gitignore}',
-    },
-  })
-end, { desc = 'Pick Files' })
+keymap('n', '<C-p>', '<Cmd>Pick files<Cr>', { desc = 'Pick Files' })
 keymap('n', '<c-n>', function()
   if not MiniFiles.close() then
     MiniFiles.open(vim.api.nvim_buf_get_name(0), false)
