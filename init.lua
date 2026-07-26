@@ -5,6 +5,7 @@ local plugins = {
   { src = 'https://github.com/nvim-mini/mini.nvim' },
   -- { src = 'https://github.com/honza/vim-snippets' },
   { src = 'https://github.com/rafamadriz/friendly-snippets' },
+  { src = 'https://github.com/chrisgrieser/nvim-scissors' },
   { src = 'https://github.com/supermaven-inc/supermaven-nvim' },
   { src = 'https://github.com/MagicDuck/grug-far.nvim' },
   -- {

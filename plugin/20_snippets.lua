@@ -1,20 +1,8 @@
 local customSnippetPath = vim.fn.stdpath('config') .. '/after/snippets'
 
--- require("scissors").setup({
---   snippetDir = customSnippetPath
--- })
---
--- -- Nvim scissors mappings
--- vim.keymap.set("n", "<leader>sne", function ()
---   require("scissors").editSnippet()
--- end, { noremap = true, silent = true, desc = "Edit snippet" }
--- )
---
--- vim.keymap.set({ "n", "x" }, "<leader>sna", function ()
---   require("scissors").addNewSnippet()
--- end, { noremap = true, silent = true, desc = "Add new snippet" }
--- )
---
+require('scissors').setup({
+  snippetDir = customSnippetPath,
+})
 
 require('mini.snippets').setup({
   snippets = {
@@ -75,3 +63,13 @@ local groups = {
 for _, group in ipairs(groups) do
   vim.api.nvim_set_hl(0, group, {})
 end
+
+local keymap = vim.keymap.set
+-- -- Nvim scissors mappings
+keymap('n', '<leader>sne', function()
+  require('scissors').editSnippet()
+end, { desc = 'Edit snippet' })
+
+keymap({ 'n', 'x' }, '<leader>sna', function()
+  require('scissors').addNewSnippet()
+end, { desc = 'Add new snippet' })
