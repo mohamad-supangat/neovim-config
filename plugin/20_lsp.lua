@@ -1,10 +1,10 @@
 local capabilities = require('lsp.capabilities')
 vim.lsp.config('*', {
-  capabilities = capabilities,
+  capabilities = capabilities
 })
 
 vim.lsp.enable({
-  'dartls',
+  'dartls'
 })
 vim.diagnostic.config({
   signs = {
@@ -13,15 +13,39 @@ vim.diagnostic.config({
       -- [vim.diagnostic.severity.WARN] = '▲',
       -- [vim.diagnostic.severity.HINT] = '⚑',
       -- [vim.diagnostic.severity.INFO] = '»',
-    },
+    }
   },
   severity_sort = true,
-  update_in_insert = true,
+  update_in_insert = true
 })
 require('mason').setup()
 require('mason-lspconfig').setup({
-  automatic_enable = true,
+  automatic_enable = true
 })
+
+require('mason-tool-installer').setup {
+
+  -- a list of all tools you want to ensure are installed upon
+  -- start
+  ensure_installed = {
+    -- lsp
+    'phpantom_lsp',
+    'emmylua_ls',
+    'tsgo',
+    'markdown_oxide',
+
+    -- formatter
+    'prettier',
+    'stylua',
+    'ruff',
+    'sqruff',
+    'shfmt'
+  },
+  auto_update = true,
+  integrations = {
+    ['mason-lspconfig'] = true
+  }
+}
 
 local keymap = vim.keymap.set
 keymap('n', 'K', vim.lsp.buf.hover, { desc = 'LSP: Hover Documentation' })

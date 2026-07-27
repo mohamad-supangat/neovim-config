@@ -136,7 +136,7 @@ require('mini.statusline').setup({
         '%<',
         { hl = 'MiniStatuslineFilename', strings = { filename } },
         '%=',
-        -- { hl = "MiniStatuslineFileinfo", strings = { fileinfo } },
+        { hl = 'MiniStatuslineFileinfo', strings = { fileinfo } },
         -- { hl = mode_hl, strings = { location } },
       })
     end,

@@ -26,12 +26,13 @@ local plugins = {
   { src = 'https://github.com/neovim/nvim-lspconfig' },
   { src = 'https://github.com/mason-org/mason.nvim' },
   { src = 'https://github.com/mason-org/mason-lspconfig.nvim' },
+  { src = 'https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim' },
   { src = 'https://github.com/stevearc/conform.nvim' },
   -- { src = 'https://github.com/nvimtools/none-ls.nvim' },
 
   -- { src = 'https://github.com/olimorris/codecompanion.nvim' },
   -- { src = 'https://github.com/ravitemer/codecompanion-history.nvim' },
-  { src = 'https://github.com/azorng/goose.nvim' },
+  { src = 'https://github.com/azorng/goose.nvim' }
 }
 
 vim.pack.add(plugins)
@@ -39,7 +40,7 @@ vim.pack.add(plugins)
 _G.Config = {}
 
 local gr = vim.api.nvim_create_augroup('custom-config', {})
-Config.new_autocmd = function(event, pattern, callback, desc)
+Config.new_autocmd = function (event, pattern, callback, desc)
   local opts = { group = gr, pattern = pattern, callback = callback, desc = desc }
   vim.api.nvim_create_autocmd(event, opts)
 end
