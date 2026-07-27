@@ -40,22 +40,16 @@ require('nvim-ts-autotag').setup({
   },
 })
 
-require('nvim_context_vt').setup({
-  enabled = true,
-  prefix = '',
-  priority = 1000,
-  -- Override the internal highlight group name
-  -- Default: 'ContextVt'
-  -- highlight = 'CustomContextVt',
-
-  disable_ft = { 'markdown' },
-  disable_virtual_lines = false,
-
-  disable_virtual_lines_ft = { 'yaml' },
-
-  min_rows = 1,
-
-  min_rows_ft = {},
+require('treesitter-context').setup({
+  enable = true,
+  multiwindow = true,
+  max_lines = 0,
+  min_window_height = 0,
+  line_numbers = true,
+  multiline_threshold = 20,
+  trim_scope = 'outer',
+  separator = '_',
+  mode = 'cursor',
 })
 
 -- -- auto start treesitter

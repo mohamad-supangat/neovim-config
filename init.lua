@@ -19,7 +19,7 @@ local plugins = {
   -- treesitter
   -- { src = 'https://github.com/vim-polyglot/vim-polyglot' },
   { src = 'https://github.com/nvim-treesitter/nvim-treesitter' },
-  { src = 'https://github.com/andersevenrud/nvim_context_vt' },
+  { src = 'https://github.com/nvim-treesitter/nvim-treesitter-context' },
   { src = 'https://github.com/windwp/nvim-ts-autotag' },
   { src = 'https://github.com/noisesfromspace/touchup.nvim' },
 
@@ -27,6 +27,7 @@ local plugins = {
   { src = 'https://github.com/neovim/nvim-lspconfig' },
   { src = 'https://github.com/mason-org/mason.nvim' },
   { src = 'https://github.com/mason-org/mason-lspconfig.nvim' },
+  { src = 'https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim' },
   { src = 'https://github.com/stevearc/conform.nvim' },
   -- { src = 'https://github.com/nvimtools/none-ls.nvim' },
 

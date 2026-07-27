@@ -17,7 +17,7 @@ require('mini.snippets').setup({
     stop = '<C-c>',
   },
 
-  expand = {
+  expands11 = {
     prepare = function(raw_snippets)
       local _, cont = MiniSnippets.default_prepare({})
       cont.cursor = vim.api.nvim_win_get_cursor(0)
