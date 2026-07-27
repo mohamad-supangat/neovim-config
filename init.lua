@@ -18,7 +18,7 @@ local plugins = {
   -- treesitter
   -- { src = 'https://github.com/vim-polyglot/vim-polyglot' },
   { src = 'https://github.com/nvim-treesitter/nvim-treesitter' },
-  { src = 'https://github.com/andersevenrud/nvim_context_vt' },
+  { src = 'https://github.com/nvim-treesitter/nvim-treesitter-context' },
   { src = 'https://github.com/windwp/nvim-ts-autotag' },
   { src = 'https://github.com/noisesfromspace/touchup.nvim' },
 
@@ -32,7 +32,7 @@ local plugins = {
 
   -- { src = 'https://github.com/olimorris/codecompanion.nvim' },
   -- { src = 'https://github.com/ravitemer/codecompanion-history.nvim' },
-  { src = 'https://github.com/azorng/goose.nvim' }
+  { src = 'https://github.com/azorng/goose.nvim' },
 }
 
 vim.pack.add(plugins)
@@ -40,7 +40,7 @@ vim.pack.add(plugins)
 _G.Config = {}
 
 local gr = vim.api.nvim_create_augroup('custom-config', {})
-Config.new_autocmd = function (event, pattern, callback, desc)
+Config.new_autocmd = function(event, pattern, callback, desc)
   local opts = { group = gr, pattern = pattern, callback = callback, desc = desc }
   vim.api.nvim_create_autocmd(event, opts)
 end
