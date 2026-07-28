@@ -1,4 +1,8 @@
 {
+  "bg right:30% fit": {
+    "body": "![bg right:30% fit](${1:})",
+    "prefix": "bg right:30% fit"
+  },
   "slide:new": {
     "body": [
       "---",
@@ -48,7 +52,11 @@
     "prefix": "slide:new-title"
   },
   "slide:split": {
-    "body": ["<split gap=\"5\" even left=\"2\">", "${1:}", "</split>"],
+    "body": [
+      "<split gap=\"5\" even left=\"2\">",
+      "${1:}",
+      "</split>"
+    ],
     "prefix": "slide:split"
   }
 }
