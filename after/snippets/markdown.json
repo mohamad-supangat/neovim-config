@@ -1,7 +1,49 @@
 {
   "bg right:30% fit": {
     "body": "![bg right:30% fit](${1:})",
-    "prefix": "bg right:30% fit"
+    "prefix": "marp:bg:right:30%:fit"
+  },
+  "marp:frontmatter": {
+    "body": [
+      "<!--",
+      "marp: true",
+      "footer: \"&copy;  Aura Komputer Digital | https://s.id/aurakomputer\"",
+      "style: |",
+      "    section {",
+      "      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;",
+      "      font-size: 1.5em;",
+      "    }",
+      "    h1 {",
+      "      color: #2c3e50;",
+      "      border-bottom: 2px solid #2980b9;",
+      "      padding-bottom: 10px;",
+      "    }",
+      "    h2 {",
+      "      color: #2980b9;",
+      "    }",
+      "    section.lead {",
+      "      text-align: center;",
+      "    }",
+      "    section.lead h1 {",
+      "      border-bottom: none;",
+      "      font-size: 1.5em;",
+      "    }",
+      "    section.lead h2 {",
+      "    }",
+      "    ul {",
+      "      font-size: 0.9em;",
+      "      line-height: 1.6;",
+      "    }",
+      "    strong {",
+      "      color: #2c3e50;",
+      "    }",
+      "-->"
+    ],
+    "prefix": "marp:frontmatter"
+  },
+  "marp:lead": {
+    "body": "<!-- _class: lead -->",
+    "prefix": "marp:lead"
   },
   "slide:new": {
     "body": [
