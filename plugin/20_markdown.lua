@@ -1,12 +1,3 @@
-require('touchup').setup({
-  bullets = { enabled = true, icons = { '✸', '✿', '✦', '✧' } },
-  checkboxes = { enabled = true },
-  code_blocks = { enabled = true },
-  markers = { enabled = true },
-  quotes = { enabled = true },
-  enter = { enabled = true },
-})
-
 local obsidianPath = vim.fn.expand('~/Documents/Obsidian/')
 vim.keymap.set(
   'n',

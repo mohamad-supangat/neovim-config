@@ -68,6 +68,10 @@
       "rev": "74b06c6c75e4eeb3108ec01852001636d85a932b",
       "src": "https://github.com/nvim-lua/plenary.nvim"
     },
+    "render-markdown.nvim": {
+      "rev": "f422cb5c6855f150e2ddcfaf44e7157b98b34f6a",
+      "src": "https://github.com/MeanderingProgrammer/render-markdown.nvim"
+    },
     "smart-splits.nvim": {
       "rev": "32f67888ac71942442fdab3819864a10449dfc41",
       "src": "https://github.com/mrjones2014/smart-splits.nvim"
@@ -75,10 +79,6 @@
     "supermaven-nvim": {
       "rev": "07d20fce48a5629686aefb0a7cd4b25e33947d50",
       "src": "https://github.com/supermaven-inc/supermaven-nvim"
-    },
-    "touchup.nvim": {
-      "rev": "9410a8640262f9b43ce04b0779d2c66134ae311b",
-      "src": "https://github.com/noisesfromspace/touchup.nvim"
     }
   }
 }
