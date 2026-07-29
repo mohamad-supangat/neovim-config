@@ -1,11 +1,12 @@
 local capabilities = require('lsp.capabilities')
 vim.lsp.config('*', {
-  capabilities = capabilities
+  capabilities = capabilities,
 })
 
 vim.lsp.enable({
-  'dartls'
+  'dartls',
 })
+
 vim.diagnostic.config({
   signs = {
     text = {
@@ -13,14 +14,14 @@ vim.diagnostic.config({
       -- [vim.diagnostic.severity.WARN] = '▲',
       -- [vim.diagnostic.severity.HINT] = '⚑',
       -- [vim.diagnostic.severity.INFO] = '»',
-    }
+    },
   },
   severity_sort = true,
-  update_in_insert = true
+  update_in_insert = true,
 })
 require('mason').setup()
 require('mason-lspconfig').setup({
-  automatic_enable = true
+  automatic_enable = true,
 })
 
 require('mason-tool-installer').setup {
@@ -39,13 +40,15 @@ require('mason-tool-installer').setup {
     'stylua',
     'ruff',
     'sqruff',
-    'shfmt'
+    'shfmt',
   },
   auto_update = true,
   integrations = {
-    ['mason-lspconfig'] = true
-  }
+    ['mason-lspconfig'] = true,
+  },
 }
+
+require('flutter-tools').setup()
 
 local keymap = vim.keymap.set
 keymap('n', 'K', vim.lsp.buf.hover, { desc = 'LSP: Hover Documentation' })

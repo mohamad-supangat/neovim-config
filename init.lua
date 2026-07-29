@@ -29,6 +29,7 @@ local plugins = {
   { src = 'https://github.com/mason-org/mason-lspconfig.nvim' },
   { src = 'https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim' },
   { src = 'https://github.com/stevearc/conform.nvim' },
+  { src = 'https://github.com/nvim-flutter/flutter-tools.nvim' },
   -- { src = 'https://github.com/nvimtools/none-ls.nvim' },
 
   -- { src = 'https://github.com/olimorris/codecompanion.nvim' },
