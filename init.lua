@@ -16,9 +16,12 @@ local plugins = {
   { src = 'https://github.com/backdround/improved-search.nvim' },
   { src = 'https://github.com/ingur/floatty.nvim' },
 
+  -- completion
+  { src = 'https://github.com/saghen/blink.lib' },
+  { src = 'https://github.com/saghen/blink.cmp' },
+
   -- treesitter
   -- { src = 'https://github.com/vim-polyglot/vim-polyglot' },
-
   { src = 'https://github.com/nvim-treesitter/nvim-treesitter' },
   { src = 'https://github.com/nvim-treesitter/nvim-treesitter-context' },
   { src = 'https://github.com/windwp/nvim-ts-autotag' },

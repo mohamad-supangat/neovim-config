@@ -1,29 +1,74 @@
-vim.o.pumblend = 5
-vim.opt.completeopt = 'fuzzy,menuone,noselect,popup'
-
-require('mini.cmdline').setup()
-require('mini.completion').setup({
-  window = {
-    info = { height = 30, width = 80, border = 'rounded' },
-    signature = { height = 30, width = 80, border = 'rounded' },
+local cmp = require('blink.cmp')
+-- cmp.build():pwait()
+cmp.setup({
+  sources = { default = { 'snippets', 'lsp', 'path', 'buffer' } },
+  fuzzy = {
+    implementation = 'lua',
+    sorts = { 'score' },
   },
-  lsp_completion = {
-    source_func = 'omnifunc',
-    auto_setup = true,
-    -- process_items = process_items,
+  completion = {
+    keyword = { range = 'full' },
+    accept = { auto_brackets = { enabled = false } },
+    list = { selection = { preselect = true, auto_insert = false } },
+    menu = {
+      border = 'none',
+      auto_show = true,
+      draw = {
+        gap = 2,
+        columns = {
+          { 'kind_icon', gap = 1 },
+          { 'label', 'label_description', gap = 1 },
+          { 'source_name', gap = 1 },
+        },
+        components = {
+          source_name = {
+            highlight = 'BlinkCmpKind',
+          },
+        },
+        treesitter = { 'lsp' },
+      },
+    },
+    documentation = {
+      auto_show = true,
+      auto_show_delay_ms = 200,
+      window = {
+        border = 'none',
+      },
+    },
+    trigger = {
+      prefetch_on_insert = false,
+      show_on_trigger_character = false,
+      show_on_insert_on_trigger_character = false,
+      show_on_accept_on_trigger_character = false,
+    },
+    ghost_text = { enabled = false },
+  },
+  signature = { enabled = true, window = { border = 'none' } },
+  keymap = {
+    preset = 'none',
+    -- ["<A-y>"] = {
+    --   function(cmp)
+    --     cmp.show({ providers = { "minuet" } })
+    --   end,
+    -- },
+    ['<CR>'] = { 'accept', 'fallback' },
+    -- ["<C-space>"] = {
+    --   function(cmp)
+    --     cmp.show({ providers = { "snippets" } })
+    --   end,
+    -- },
+    ['<C-space>'] = { 'show', 'hide' },
+    ['<C-S-k>'] = { 'show_documentation', 'hide_documentation', 'fallback' },
+    ['<C-e>'] = { 'hide', 'fallback' },
+
+    ['<Up>'] = { 'select_prev', 'fallback' },
+    ['<Down>'] = { 'select_next', 'fallback' },
+    ['<S-Tab>'] = { 'select_prev', 'fallback' },
+    ['<Tab>'] = { 'select_next', 'fallback' },
+    ['<C-k>'] = { 'select_prev', 'fallback' },
+    ['<C-j>'] = { 'select_next', 'fallback' },
+    -- ["<C-l>"] = { "accept", "fallback" },
+    ['<C-b>'] = { 'scroll_documentation_up', 'fallback' },
+    ['<C-f>'] = { 'scroll_documentation_down', 'fallback' },
   },
 })
-
-local on_attach = function(ev)
-  vim.bo[ev.buf].omnifunc = 'v:lua.MiniCompletion.completefunc_lsp'
-end
-Config.new_autocmd('LspAttach', nil, on_attach, "Set 'omnifunc'")
-
-local map_multistep = require('mini.keymap').map_multistep
-
-map_multistep('i', '<Tab>', { 'pmenu_next' })
-map_multistep('i', '<S-Tab>', { 'pmenu_prev' })
-map_multistep('i', '<C-j>', { 'pmenu_next' })
-map_multistep('i', '<C-k>', { 'pmenu_prev' })
-map_multistep('i', '<CR>', { 'pmenu_accept', 'minipairs_cr' })
-map_multistep('i', '<BS>', { 'minipairs_bs' })
