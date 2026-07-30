@@ -3,10 +3,6 @@ vim.lsp.config('*', {
   capabilities = capabilities,
 })
 
-vim.lsp.enable({
-  'dartls',
-})
-
 vim.diagnostic.config({
   signs = {
     text = {
@@ -41,8 +37,9 @@ require('mason-tool-installer').setup {
     'ruff',
     'sqruff',
     'shfmt',
+    'blade-formatter',
   },
-  auto_update = true,
+  auto_update = false,
   integrations = {
     ['mason-lspconfig'] = true,
   },
