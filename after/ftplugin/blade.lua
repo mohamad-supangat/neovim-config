@@ -1,8 +1,11 @@
 vim.bo.commentstring = '{{-- %s --}}'
 
-vim.api.nvim_create_user_command('Format', function()
-  require('conform').format({ lsp_fallback = false })
+function format()
+  require('conform').format({ lsp_fallback = false, async = false })
   vim.lsp.buf.format({ async = false })
-end, {
-  desc = 'Format blade terlebih dahulu baru dengan lsp',
-})
+end
+
+local keymap = vim.keymap.set
+
+keymap({ 'n', 'x' }, 'fm', format, { noremap = true, silent = true, desc = 'Format' })
+keymap({ 'n', 'x' }, 'fM', format, { noremap = true, silent = true, desc = 'Format' })
