@@ -70,6 +70,14 @@
     ],
     "prefix": "actions::datatable custom q-card-actions"
   },
+  "btn-action-dropdown": {
+    "body": [
+      "q-btn-dropdown(color=\"primary\", flat, :label=\"__('Aksi')\" rounded)",
+      "    q-list",
+      "        ${1:}"
+    ],
+    "prefix": "btn-action-dropdown"
+  },
   "const:filter": {
     "body": "const filter = ref({});",
     "prefix": "const:filter"
