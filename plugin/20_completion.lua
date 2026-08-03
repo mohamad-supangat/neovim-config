@@ -46,17 +46,12 @@ cmp.setup({
   signature = { enabled = true, window = { border = 'none' } },
   keymap = {
     preset = 'none',
-    -- ["<A-y>"] = {
-    --   function(cmp)
-    --     cmp.show({ providers = { "minuet" } })
-    --   end,
-    -- },
     ['<CR>'] = { 'accept', 'fallback' },
-    -- ["<C-space>"] = {
-    --   function(cmp)
-    --     cmp.show({ providers = { "snippets" } })
-    --   end,
-    -- },
+    ['<C-A-space>'] = {
+      function(_cmp)
+        _cmp.show({ providers = { 'snippets' } })
+      end,
+    },
     ['<C-space>'] = { 'show', 'hide' },
     ['<C-S-k>'] = { 'show_documentation', 'hide_documentation', 'fallback' },
     ['<C-e>'] = { 'hide', 'fallback' },
@@ -64,8 +59,8 @@ cmp.setup({
     ['<Up>'] = { 'select_prev', 'fallback' },
     ['<Down>'] = { 'select_next', 'fallback' },
     ['<S-Tab>'] = { 'select_prev', 'fallback' },
-    ['<Tab>'] = { 'select_next', 'fallback' },
-    ['<C-k>'] = { 'select_prev', 'fallback' },
+    ['<Tab>'] = { 'select_next', 'snippet_forward', 'fallback' },
+    ['<C-k>'] = { 'select_prev', 'snippet_forward', 'fallback' },
     ['<C-j>'] = { 'select_next', 'fallback' },
     -- ["<C-l>"] = { "accept", "fallback" },
     ['<C-b>'] = { 'scroll_documentation_up', 'fallback' },
