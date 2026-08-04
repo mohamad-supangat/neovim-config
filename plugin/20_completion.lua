@@ -3,20 +3,18 @@ local cmp = require('blink.cmp')
 cmp.setup({
   sources = {
     default = {
-    'avante',
+      -- 'avante',
       'snippets',
       'lsp',
       'path',
       'buffer',
-
     },
     providers = {
-    avante = {
-                    module = 'blink-cmp-avante',
-                    name = 'Avante',
-                    opts = {
-                    }
-                }
+      avante = {
+        module = 'blink-cmp-avante',
+        name = 'Avante',
+        opts = {},
+      },
     },
   },
   fuzzy = {

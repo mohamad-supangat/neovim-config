@@ -35,15 +35,14 @@ local plugins = {
   { src = 'https://github.com/nvim-flutter/flutter-tools.nvim' },
   -- { src = 'https://github.com/nvimtools/none-ls.nvim' },
 
-  {
-    src = 'https://github.com/yetone/avante.nvim',
-    version = 'main', -- default
-  },
-  'https://github.com/Kaiser-Yang/blink-cmp-avante',
-  'https://github.com/MunifTanjim/nui.nvim',
-
-  -- { src = 'https://github.com/olimorris/codecompanion.nvim' },
-  -- { src = 'https://github.com/ravitemer/codecompanion-history.nvim' },
+  -- {
+  --   src = 'https://github.com/yetone/avante.nvim',
+  --   version = 'main', -- default
+  -- },
+  -- 'https://github.com/Kaiser-Yang/blink-cmp-avante',
+  -- 'https://github.com/MunifTanjim/nui.nvim',
+  { src = 'https://github.com/olimorris/codecompanion.nvim' },
+  { src = 'https://github.com/ravitemer/codecompanion-history.nvim' },
   -- { src = 'https://github.com/azorng/goose.nvim' },
 }
 

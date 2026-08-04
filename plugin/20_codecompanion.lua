@@ -1,4 +1,4 @@
-if package.loaded['codecompanion'] then
+if true or package.loaded['codecompanion'] then
   -- Gunakan vim.uv untuk Neovim 0.10+ dengan fallback ke vim.loop untuk versi lama
   local uv = vim.uv or vim.loop
 
