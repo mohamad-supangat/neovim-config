@@ -1,7 +1,24 @@
 local cmp = require('blink.cmp')
 -- cmp.build():pwait()
 cmp.setup({
-  sources = { default = { 'snippets', 'lsp', 'path', 'buffer' } },
+  sources = {
+    default = {
+    'avante',
+      'snippets',
+      'lsp',
+      'path',
+      'buffer',
+
+    },
+    providers = {
+    avante = {
+                    module = 'blink-cmp-avante',
+                    name = 'Avante',
+                    opts = {
+                    }
+                }
+    },
+  },
   fuzzy = {
     implementation = 'lua',
     sorts = { 'score' },
