@@ -141,16 +141,6 @@ if true or package.loaded['codecompanion'] then
           name = 'gemini',
           model = 'gemini-3-flash-preview',
         },
-        keymaps = {
-          accept_change = {
-            modes = { n = 'ga' },
-            description = 'Accept the suggested change',
-          },
-          reject_change = {
-            modes = { n = 'gr' },
-            description = 'Reject the suggested change',
-          },
-        },
       },
     },
     opts = {
