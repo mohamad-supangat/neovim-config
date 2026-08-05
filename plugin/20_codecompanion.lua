@@ -184,5 +184,7 @@ if true or package.loaded['codecompanion'] then
   Spinner:init()
 
   -- keymaps
-  vim.keymap.set({ 'n', 'x' }, '<A-b>', '<cmd>CodeCompanionChat Toggle<CR>', { desc = 'Toggle CodeCompanion Chat' })
+  vim.keymap.set({ 'n' }, '<A-b>', '<cmd>CodeCompanionChat Toggle<CR>', { desc = 'Toggle CodeCompanion Chat' })
+  vim.keymap.set({ 'x' }, '<A-b>', '<cmd>CodeCompanionChat<CR>', { desc = 'Send Selection to CodeCompanion Chat' })
+  vim.keymap.set({ 'x' }, '<A-i>', '<cmd>CodeCompanion<CR>', { desc = 'Code Compantion inline prompt' })
 end
