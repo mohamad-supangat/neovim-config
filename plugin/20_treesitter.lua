@@ -43,7 +43,7 @@ require('nvim-ts-autotag').setup({
 require('treesitter-context').setup({
   enable = true,
   multiwindow = true,
-  max_lines = 0,
+  max_lines = 10,
   min_window_height = 0,
   line_numbers = true,
   multiline_threshold = 20,
