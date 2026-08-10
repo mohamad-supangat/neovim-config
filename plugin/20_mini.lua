@@ -1,4 +1,4 @@
-vim.cmd('colorscheme miniwinter')
+vim.cmd('colorscheme minispring')
 
 local keymap = vim.keymap.set
 
