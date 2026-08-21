@@ -65,16 +65,16 @@ require('mini.misc').setup()
 require('mini.extra').setup()
 require('mini.diff').setup()
 require('mini.git').setup()
-require('mini.indentscope').setup({
-  symbol = '▏',
-  options = {
-    try_as_border = true,
-  },
-  -- draw = {
-  --   delay = 0,
-  --   animation = require("mini.indentscope").gen_animation.none(),
-  -- },
-})
+-- require('mini.indentscope').setup({
+--   symbol = '▏',
+--   options = {
+--     try_as_border = true,
+--   },
+--   -- draw = {
+--   --   delay = 0,
+--   --   animation = require("mini.indentscope").gen_animation.none(),
+--   -- },
+-- })
 
 require('mini.pairs').setup({ modes = { command = true } })
 
@@ -142,37 +142,37 @@ require('mini.statusline').setup({
     end,
   },
 })
-local starter = require('mini.starter')
-starter.setup({
-  evaluate_single = true,
-  items = {
-    {
-      name = 'Config: init.lua',
-      action = 'e ~/.config/nvim/init.lua',
-      section = 'Nvim',
-    },
-    {
-      name = 'Snippets: package.json',
-      action = 'e ~/projects/snippets/package.json',
-      section = 'Nvim',
-    },
-    {
-      name = 'Obsidian Vault',
-      action = 'e ~/Documents/Obsidian/',
-      section = 'Nvim',
-    },
-    starter.sections.sessions(5, true),
-    starter.sections.builtin_actions(),
-    starter.sections.recent_files(10, false),
-    -- starter.sections.recent_files(10, true),
-  },
-  content_hooks = {
-    starter.gen_hook.adding_bullet(),
-    starter.gen_hook.aligning('center', 'center'),
-    starter.gen_hook.indexing('all', { 'Builtin actions' }),
-    starter.gen_hook.padding(10, 0),
-  },
-})
+-- local starter = require('mini.starter')
+-- starter.setup({
+--   evaluate_single = true,
+--   items = {
+--     {
+--       name = 'Config: init.lua',
+--       action = 'e ~/.config/nvim/init.lua',
+--       section = 'Nvim',
+--     },
+--     {
+--       name = 'Snippets: package.json',
+--       action = 'e ~/projects/snippets/package.json',
+--       section = 'Nvim',
+--     },
+--     {
+--       name = 'Obsidian Vault',
+--       action = 'e ~/Documents/Obsidian/',
+--       section = 'Nvim',
+--     },
+--     starter.sections.sessions(5, true),
+--     starter.sections.builtin_actions(),
+--     starter.sections.recent_files(10, false),
+--     -- starter.sections.recent_files(10, true),
+--   },
+--   content_hooks = {
+--     starter.gen_hook.adding_bullet(),
+--     starter.gen_hook.aligning('center', 'center'),
+--     starter.gen_hook.indexing('all', { 'Builtin actions' }),
+--     starter.gen_hook.padding(10, 0),
+--   },
+-- })
 local miniclue = require('mini.clue')
 miniclue.setup({
   triggers = {
@@ -225,6 +225,6 @@ keymap('n', '<Leader>ep', function()
     },
   })
 end, { desc = 'Select Neovim config file' })
-keymap('n', '<c-z>', '<Cmd>lua MiniMisc.zoom()<CR>', { desc = 'Zoom toggle / Zen Mode' })
+-- keymap('n', '<c-z>', '<Cmd>lua MiniMisc.zoom()<CR>', { desc = 'Zoom toggle / Zen Mode' })
 keymap('n', '<Leader>nn', '<Cmd>lua MiniNotify.show_history()<CR>', { desc = 'Notifications' })
 keymap('n', '<Leader>fb', '<Cmd>Pick buffers<CR>', { desc = 'Pick Buffers' })
