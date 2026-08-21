@@ -3,6 +3,7 @@ local plugins = {
   { src = 'https://github.com/nvim-lua/plenary.nvim' },
 
   { src = 'https://github.com/nvim-mini/mini.nvim' },
+  { src = 'https://github.com/folke/snacks.nvim' },
   -- { src = 'https://github.com/honza/vim-snippets' },
   { src = 'https://github.com/rafamadriz/friendly-snippets' },
   { src = 'https://github.com/chrisgrieser/nvim-scissors' },
