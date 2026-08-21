@@ -1,6 +1,8 @@
 {
   "Json Response": {
-    "body": ["response()->json(${1});"],
+    "body": [
+      "response()->json(${1});"
+    ],
     "description": "Json Response",
     "prefix": "json-response"
   },
@@ -374,12 +376,20 @@
     "prefix": "Model::v"
   },
   "Route::post action name": {
-    "body": ["Route::post('action', [${1}, 'action'\\])->name('action');", ""],
+    "body": [
+      "Route::post('action', [${1}, 'action'\\])->name('action');",
+      ""
+    ],
     "description": "Route::post action name",
     "prefix": "route-post-action"
   },
   "akun:si-pmn": {
-    "body": ["[", "    'akun'   => '${1:}',", "    'number' => 10,", "],"],
+    "body": [
+      "[",
+      "    'akun'   => '${1:}',",
+      "    'number' => 10,",
+      "],"
+    ],
     "prefix": "akun:si-pmn"
   },
   "column": {
@@ -614,6 +624,41 @@
       ");"
     ],
     "prefix": "sekolahku:route-group"
+  },
+  "sekolahku:seed-document-template": {
+    "body": [
+      "TemplateHelpers::seed('Payroll', InternshipSchedule::class, [",
+      "    'Rekap Penempatan Prakerin' => [",
+      "        'reference_class' => InternshipSchedule::class,",
+      "        'file'            => 'rekap_penempatan_prakerin',",
+      "        'print_setting'   => [",
+      "            'paper_size'        => 'letter',",
+      "            'paper_orientation' => 'potrait',",
+      "            'font_size'         => 12,",
+      "        ],",
+      "        'custom_fields' => [",
+      "            [",
+      "                'label' => 'Nomor Dokumen',",
+      "                'key'   => 'nomor',",
+      "                'type'  => 'input',",
+      "            ],",
+      "            [",
+      "                'label' => 'Tanggal Dokumen',",
+      "                'key'   => 'tanggal',",
+      "                'type'  => 'date_picker',",
+      "            ],",
+      "",
+      "            [",
+      "                'label' => 'Jadwal Prakerin',",
+      "                'key'   => 'schedule_id',",
+      "                'type'  => 'select_api',",
+      "                'url'   => route('internship.schedule.datatable'),",
+      "            ],",
+      "        ],",
+      "    ],",
+      "]);"
+    ],
+    "prefix": "sekolahku:seed-document-template"
   },
   "sekolahku:seed-permissions": {
     "body": [

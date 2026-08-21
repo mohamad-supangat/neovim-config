@@ -22,7 +22,7 @@
     "body": [
       "{",
       "    name: \"${1}\",",
-      "    label: \"${1}\",",
+      "    label: __(\"${2}\"),",
       "    field: \"${1}\",",
       "    align: \"left\",",
       "    sortable: true,",
@@ -163,6 +163,18 @@
   "sekolahku::attachment-uploader": {
     "body": "import AttachmentsUploader from '@/views/components/attachments-uploader.vue';",
     "prefix": "sekolahku::attachment-uploader"
+  },
+  "sekolahku:import-bus": {
+    "body": "import bus from '@/scripts/bus';",
+    "prefix": "sekolahku:import-bus"
+  },
+  "sekolahku:import-data": {
+    "body": "import { months } from '@/data';",
+    "prefix": "sekolahku:import-data"
+  },
+  "sekolahku:import-select-school-year": {
+    "body": "import SelectSchoolYear from '@Student/views/components/select-school-year.vue';",
+    "prefix": "sekolahku:import-select-school-year"
   },
   "sekolahku:import-simple-editor": {
     "body": "import SimpleEditor from '@/views/components/simple-editor.vue';",
