@@ -2,12 +2,17 @@ local plugins = {
   { src = 'https://codeberg.org/cryptomilk/nvim-pack-ui' },
   { src = 'https://github.com/nvim-lua/plenary.nvim' },
 
+  -- colorschema
+  { src = 'https://github.com/oskarnurm/koda.nvim' },
+
   { src = 'https://github.com/nvim-mini/mini.nvim' },
   { src = 'https://github.com/folke/snacks.nvim' },
+
+  -- snippets
   -- { src = 'https://github.com/honza/vim-snippets' },
   { src = 'https://github.com/rafamadriz/friendly-snippets' },
   { src = 'https://github.com/chrisgrieser/nvim-scissors' },
-  { src = 'https://github.com/supermaven-inc/supermaven-nvim' },
+
   { src = 'https://github.com/MagicDuck/grug-far.nvim' },
   { src = 'https://github.com/mrjones2014/smart-splits.nvim' },
   { src = 'https://github.com/backdround/improved-search.nvim' },
@@ -16,6 +21,9 @@ local plugins = {
   -- completion
   { src = 'https://github.com/saghen/blink.lib' },
   { src = 'https://github.com/saghen/blink.cmp' },
+
+  -- ai helpers
+  { src = 'https://github.com/supermaven-inc/supermaven-nvim' },
 
   -- treesitter
   -- { src = 'https://github.com/vim-polyglot/vim-polyglot' },
@@ -32,6 +40,7 @@ local plugins = {
   { src = 'https://github.com/nvim-flutter/flutter-tools.nvim' },
   -- { src = 'https://github.com/nvimtools/none-ls.nvim' },
 
+  -- ai chats
   -- {
   --   src = 'https://github.com/yetone/avante.nvim',
   --   version = 'main', -- default

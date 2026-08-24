@@ -1,4 +1,4 @@
-vim.cmd('colorscheme minispring')
+-- vim.cmd('colorscheme minispring')
 
 local keymap = vim.keymap.set
 
@@ -11,7 +11,7 @@ require('mini.basics').setup({
   mappings = {
     basic = true,
     extra_ui = true,
-    win_borders = 'single',
+    win_borders = 'rounded',
     windows = true,
     move_with_alt = true,
   },
@@ -21,7 +21,7 @@ require('mini.bufremove').setup()
 require('mini.icons').setup()
 require('mini.icons').mock_nvim_web_devicons()
 -- require('mini.notify').setup()
-require('mini.tabline').setup()
+-- require('mini.tabline').setup()
 require('mini.files').setup({
   use_as_default_explorer = true,
   content = {
@@ -61,6 +61,19 @@ vim.api.nvim_create_autocmd('User', {
   end,
 })
 
+vim.api.nvim_create_autocmd('User', {
+  pattern = 'MiniFilesWindowUpdate',
+  callback = function(args)
+    local win_id = args.data.win_id
+    -- Ensure window exists before updating config
+    if vim.api.nvim_win_is_valid(win_id) then
+      vim.api.nvim_win_set_config(win_id, {
+        border = 'rounded',
+      })
+    end
+  end,
+})
+
 require('mini.misc').setup()
 require('mini.extra').setup()
 require('mini.diff').setup()
@@ -84,7 +97,7 @@ require('mini.pick').setup({
       height = math.floor(0.618 * vim.o.lines)
       width = math.floor(0.618 * vim.o.columns)
       return {
-        border = 'single',
+        border = 'rounded',
         anchor = 'NW',
         height = height,
         width = width,
@@ -144,7 +157,7 @@ require('mini.statusline').setup({
 })
 -- local starter = require('mini.starter')
 -- starter.setup({
---   evaluate_single = true,
+--   evaluate_rounded = true,
 --   items = {
 --     {
 --       name = 'Config: init.lua',
