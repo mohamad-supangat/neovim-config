@@ -28,7 +28,7 @@ require('mason-tool-installer').setup {
     -- lsp
     'phpantom_lsp',
     'emmylua_ls',
-    'tsgo',
+    'tsc',
     -- 'markdown_oxide',
 
     -- formatter
