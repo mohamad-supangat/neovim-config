@@ -431,6 +431,24 @@
     ],
     "prefix": "sekolahku:datatable-page"
   },
+  "sekolahku:q-btn-dropdown>list print document": {
+    "body": [
+      "q-btn-dropdown(color=\"secondary\", flat, icon=\"mdi-printer\")",
+      "    q-list(separator)",
+      "        q-item(",
+      "            v-for=\"template in documentTemplates\",",
+      "            clickable,",
+      "            v-close-popup,",
+      "            target=\"_blank\",",
+      "            :href=\"\\$route('document.print', { template: template.id })\"",
+      "        )",
+      "            q-item-section(avatar)",
+      "                q-icon(name=\"mdi-printer-outline\")",
+      "            q-item-section",
+      "                | {{ template.name }}"
+    ],
+    "prefix": "sekolahku:q-btn-dropdown>list print document"
+  },
   "template-dialog-quasar": {
     "body": [
       "<template lang=\"pug\">",
