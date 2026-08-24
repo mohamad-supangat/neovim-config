@@ -1,7 +1,7 @@
 {
   "plugins": {
     "blink.cmp": {
-      "rev": "e116ff9c5c1c2ed6bcdb2e0a6e547099876a8116",
+      "rev": "d50cfb205c677143d1f036a4749e21c1c8c6bc85",
       "src": "https://github.com/saghen/blink.cmp"
     },
     "blink.lib": {
@@ -13,7 +13,7 @@
       "src": "https://github.com/ravitemer/codecompanion-history.nvim"
     },
     "codecompanion.nvim": {
-      "rev": "6fb43a1754956198f94df141de5e185a12a52c4d",
+      "rev": "7116eecc646c3f33d755beeb922126995bbd41e1",
       "src": "https://github.com/olimorris/codecompanion.nvim"
     },
     "conform.nvim": {
@@ -57,11 +57,11 @@
       "src": "https://github.com/mason-org/mason.nvim"
     },
     "mini.nvim": {
-      "rev": "e58ad4b0c9e9376096b9704f98fc00d4c9448870",
+      "rev": "8d86a057fa14681cf7cab74ea7cba894a0abe14f",
       "src": "https://github.com/nvim-mini/mini.nvim"
     },
     "nvim-lspconfig": {
-      "rev": "bff1bd61cb1455040533201ca1edf1e84efa578f",
+      "rev": "31e3c02ac84f4766383930f46dfabfea4d315cf8",
       "src": "https://github.com/neovim/nvim-lspconfig"
     },
     "nvim-pack-ui": {
@@ -73,7 +73,7 @@
       "src": "https://github.com/chrisgrieser/nvim-scissors"
     },
     "nvim-treesitter": {
-      "rev": "074aa4422bf029908338e855d0c0f71470a971bb",
+      "rev": "8b98b4470eb326f1c7b50dae79f8c963568e5720",
       "src": "https://github.com/nvim-treesitter/nvim-treesitter"
     },
     "nvim-treesitter-context": {
@@ -89,7 +89,7 @@
       "src": "https://github.com/nvim-lua/plenary.nvim"
     },
     "smart-splits.nvim": {
-      "rev": "289971cfdbc7f7b1c91670a228b239d870130af7",
+      "rev": "5e92431aa7f5e618c2f6825f682df6d94f6e0a02",
       "src": "https://github.com/mrjones2014/smart-splits.nvim"
     },
     "snacks.nvim": {
