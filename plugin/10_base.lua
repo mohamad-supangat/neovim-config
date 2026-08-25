@@ -1,3 +1,5 @@
+vim.cmd('colorscheme catppuccin')
+
 vim.g.mapleader    = ' '
 vim.opt.clipboard  = 'unnamedplus'
 vim.opt.number     = true
@@ -25,4 +27,4 @@ vim.o.ignorecase   = true
 vim.o.incsearch    = true
 vim.o.smartcase    = true
 
-vim.opt.statusline = "%<%f %h%m%r%=%{coc#status()} %{get(b:,'coc_current_function','')} %-14.(%l,%c%V%) %P"
+-- vim.opt.statusline = "%<%f %h%m%r%=%{coc#status()} %{get(b:,'coc_current_function','')} %-14.(%l,%c%V%) %P"
