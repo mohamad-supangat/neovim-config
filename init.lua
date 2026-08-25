@@ -2,8 +2,8 @@ local plugins = {
   { src = 'https://codeberg.org/cryptomilk/nvim-pack-ui' },
   { src = 'https://github.com/nvim-lua/plenary.nvim' },
 
-  -- colorschema
-  { src = 'https://github.com/oskarnurm/koda.nvim' },
+  -- -- colorschema
+  -- { src = 'https://github.com/oskarnurm/koda.nvim' },
 
   { src = 'https://github.com/nvim-mini/mini.nvim' },
   { src = 'https://github.com/folke/snacks.nvim' },

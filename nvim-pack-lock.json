@@ -1,7 +1,7 @@
 {
   "plugins": {
     "blink.cmp": {
-      "rev": "d50cfb205c677143d1f036a4749e21c1c8c6bc85",
+      "rev": "101d71861f6a012f2be80e4100720874330d86aa",
       "src": "https://github.com/saghen/blink.cmp"
     },
     "blink.lib": {
@@ -13,7 +13,7 @@
       "src": "https://github.com/ravitemer/codecompanion-history.nvim"
     },
     "codecompanion.nvim": {
-      "rev": "7116eecc646c3f33d755beeb922126995bbd41e1",
+      "rev": "fd07e440c115e318031c5f3f8c746f01eb4cac56",
       "src": "https://github.com/olimorris/codecompanion.nvim"
     },
     "conform.nvim": {
@@ -40,12 +40,8 @@
       "rev": "9480bfb0e05f990a1658464c1d349dd2acfb9c34",
       "src": "https://github.com/backdround/improved-search.nvim"
     },
-    "koda.nvim": {
-      "rev": "25a5c98ca2f6bb0b69f5e2654a78f0d7c7e0721d",
-      "src": "https://github.com/oskarnurm/koda.nvim"
-    },
     "mason-lspconfig.nvim": {
-      "rev": "9d28935aa95fa6c1dc7c4d6747f101a72a8a4bec",
+      "rev": "24d4ab0838b250753b307a8747ade06dc99aed9d",
       "src": "https://github.com/mason-org/mason-lspconfig.nvim"
     },
     "mason-tool-installer.nvim": {
@@ -57,11 +53,11 @@
       "src": "https://github.com/mason-org/mason.nvim"
     },
     "mini.nvim": {
-      "rev": "8d86a057fa14681cf7cab74ea7cba894a0abe14f",
+      "rev": "0caecdd7408bc0a77697a83b931c742fcc5b0349",
       "src": "https://github.com/nvim-mini/mini.nvim"
     },
     "nvim-lspconfig": {
-      "rev": "31e3c02ac84f4766383930f46dfabfea4d315cf8",
+      "rev": "af9adce488c75ca0a81017945c2b7fa7b461bc23",
       "src": "https://github.com/neovim/nvim-lspconfig"
     },
     "nvim-pack-ui": {
