@@ -13,7 +13,7 @@
       "src": "https://github.com/ravitemer/codecompanion-history.nvim"
     },
     "codecompanion.nvim": {
-      "rev": "fd07e440c115e318031c5f3f8c746f01eb4cac56",
+      "rev": "c39ddadd1d4e4f976d5c165348bd89eed98e3178",
       "src": "https://github.com/olimorris/codecompanion.nvim"
     },
     "conform.nvim": {
@@ -40,8 +40,12 @@
       "rev": "9480bfb0e05f990a1658464c1d349dd2acfb9c34",
       "src": "https://github.com/backdround/improved-search.nvim"
     },
+    "koda.nvim": {
+      "rev": "25a5c98ca2f6bb0b69f5e2654a78f0d7c7e0721d",
+      "src": "https://github.com/oskarnurm/koda.nvim"
+    },
     "mason-lspconfig.nvim": {
-      "rev": "24d4ab0838b250753b307a8747ade06dc99aed9d",
+      "rev": "1b621470c01bd8190bb32a290d21575d3e6470c5",
       "src": "https://github.com/mason-org/mason-lspconfig.nvim"
     },
     "mason-tool-installer.nvim": {
