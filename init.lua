@@ -51,6 +51,9 @@ local plugins = {
   { src = 'https://github.com/olimorris/codecompanion.nvim' },
   { src = 'https://github.com/ravitemer/codecompanion-history.nvim' },
   -- { src = 'https://github.com/azorng/goose.nvim' },
+  --
+  --
+  { src = 'https://github.com/mistweaverco/kulala.nvim' },
 }
 
 vim.pack.add(plugins)
