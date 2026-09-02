@@ -2,10 +2,6 @@ local plugins = {
   { src = 'https://codeberg.org/cryptomilk/nvim-pack-ui' },
   { src = 'https://github.com/nvim-lua/plenary.nvim' },
 
-  -- -- colorschema
-  { src = 'https://github.com/Senal-D-A-Gunaratna/matugen.nvim' },
-  -- { src = 'https://github.com/oskarnurm/koda.nvim' },
-
   { src = 'https://github.com/nvim-mini/mini.nvim' },
   { src = 'https://github.com/folke/snacks.nvim' },
 
@@ -53,7 +49,6 @@ local plugins = {
   -- { src = 'https://github.com/azorng/goose.nvim' },
   --
   --
-  { src = 'https://github.com/mistweaverco/kulala.nvim' },
 }
 
 vim.pack.add(plugins)
