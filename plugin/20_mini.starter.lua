@@ -42,7 +42,7 @@ starter.setup({
       { name = "Mason", action = "Mason", section = "Updaters" },
       { name = "Update plugins", action = "lua vim.pack.update()", section = "Updaters" }
     },
-    -- starter.sections.sessions(5, true),
+    starter.sections.sessions(5, true),
     starter.sections.recent_files(3, true, false),
 
     starter.sections.recent_files(3, false, false)
