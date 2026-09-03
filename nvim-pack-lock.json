@@ -1,7 +1,7 @@
 {
   "plugins": {
     "blink.cmp": {
-      "rev": "101d71861f6a012f2be80e4100720874330d86aa",
+      "rev": "2befba190e0ffa3692ab364f75604c9c2d248adf",
       "src": "https://github.com/saghen/blink.cmp"
     },
     "blink.lib": {
@@ -40,6 +40,14 @@
       "rev": "9480bfb0e05f990a1658464c1d349dd2acfb9c34",
       "src": "https://github.com/backdround/improved-search.nvim"
     },
+    "koda.nvim": {
+      "rev": "25a5c98ca2f6bb0b69f5e2654a78f0d7c7e0721d",
+      "src": "https://github.com/oskarnurm/koda.nvim"
+    },
+    "kulala.nvim": {
+      "rev": "232a9939919fe9bc88d573bce92de50f2f160c60",
+      "src": "https://github.com/mistweaverco/kulala.nvim"
+    },
     "mason-lspconfig.nvim": {
       "rev": "40276c4df7e6bdce6801d6c035c6227f9115a855",
       "src": "https://github.com/mason-org/mason-lspconfig.nvim"
@@ -53,7 +61,7 @@
       "src": "https://github.com/mason-org/mason.nvim"
     },
     "matugen.nvim": {
-      "rev": "7f8a05f0f3e7f6a135998f50a9cbacd8ad6a7c28",
+      "rev": "813e3c70d9d6c34fe2758e20688adb8f7a7fcda4",
       "src": "https://github.com/Senal-D-A-Gunaratna/matugen.nvim"
     },
     "mini.nvim": {
