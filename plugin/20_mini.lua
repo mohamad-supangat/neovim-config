@@ -23,6 +23,7 @@ require('mini.icons').mock_nvim_web_devicons()
 require('mini.sessions').setup()
 -- require('mini.notify').setup()
 require('mini.tabline').setup()
+-- require('mini.statuscolumn').setup()
 require('mini.files').setup({
   use_as_default_explorer = true,
   content = {
@@ -77,7 +78,13 @@ vim.api.nvim_create_autocmd('User', {
 
 require('mini.misc').setup()
 require('mini.extra').setup()
-require('mini.diff').setup()
+require('mini.diff').setup({
+  view = {
+    style = 'sign',
+    signs = { add = '+', change = '~', delete = '-' },
+    -- signs = { add = ' ', change = ' ', delete = '' },
+  },
+})
 require('mini.git').setup()
 -- require('mini.indentscope').setup({
 --   symbol = '▏',
