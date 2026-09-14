@@ -10,6 +10,9 @@ require('snacks').setup({
       enabled = true,
     },
   },
+  gitbrowse = {
+    enabled = true,
+  },
   scope = { enabled = true },
   statuscolumn = { enabled = true },
   image = {
