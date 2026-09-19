@@ -506,11 +506,12 @@
   },
   "try-finally": {
     "body": [
-      "loading.value = true",
-      "  try {",
-      "  } finally {",
-      "    loading.value = false",
-      "  }"
+      "loading.value${1:} = true",
+      "try {",
+      "  ${2:}",
+      "} finally {",
+      "  loading.value${1:} = false",
+      "}"
     ],
     "prefix": "try-finally"
   }
