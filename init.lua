@@ -23,10 +23,7 @@ local plugins = {
   { src = 'https://github.com/supermaven-inc/supermaven-nvim' },
 
   -- treesitter
-  -- { src = 'https://github.com/vim-polyglot/vim-polyglot' },
-  { src = 'https://github.com/nvim-treesitter/nvim-treesitter' },
-  { src = 'https://github.com/nvim-treesitter/nvim-treesitter-context' },
-  { src = 'https://github.com/windwp/nvim-ts-autotag' },
+  { src = 'https://github.com/vim-polyglot/vim-polyglot' },
 
   -- lsp native
   { src = 'https://github.com/neovim/nvim-lspconfig' },

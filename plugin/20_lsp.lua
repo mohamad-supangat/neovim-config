@@ -33,7 +33,7 @@ require('mason-tool-installer').setup {
     -- 'markdown_oxide',
 
     -- formatter
-    'prettier',
+    'prettierd',
     'stylua',
     'ruff',
     'sqruff',
