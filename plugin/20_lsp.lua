@@ -3,6 +3,11 @@ vim.lsp.config('*', {
   capabilities = capabilities,
 })
 
+-- enable lsp without mason-lspconfig
+vim.lsp.enable({
+  'dartls',
+})
+
 vim.diagnostic.config({
   signs = {
     text = {
@@ -14,6 +19,11 @@ vim.diagnostic.config({
   },
   severity_sort = true,
   update_in_insert = true,
+  virtual_lines = false,
+  virtual_text = {
+    current_line = true,
+    severity = { min = 'ERROR', max = 'ERROR' },
+  },
 })
 require('mason').setup()
 require('mason-lspconfig').setup({
