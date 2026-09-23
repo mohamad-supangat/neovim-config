@@ -1,12 +1,10 @@
 local plugins = {
-  { src = 'https://codeberg.org/cryptomilk/nvim-pack-ui' },
   { src = 'https://github.com/nvim-lua/plenary.nvim' },
 
   { src = 'https://github.com/nvim-mini/mini.nvim' },
   { src = 'https://github.com/folke/snacks.nvim' },
 
   -- snippets
-  -- { src = 'https://github.com/honza/vim-snippets' },
   { src = 'https://github.com/rafamadriz/friendly-snippets' },
   { src = 'https://github.com/chrisgrieser/nvim-scissors' },
 
@@ -22,25 +20,14 @@ local plugins = {
   -- ai helpers
   { src = 'https://github.com/supermaven-inc/supermaven-nvim' },
 
-  -- treesitter
   { src = 'https://github.com/vim-polyglot/vim-polyglot' },
 
-  -- lsp native
   { src = 'https://github.com/neovim/nvim-lspconfig' },
   { src = 'https://github.com/mason-org/mason.nvim' },
   { src = 'https://github.com/mason-org/mason-lspconfig.nvim' },
-  { src = 'https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim' },
   { src = 'https://github.com/stevearc/conform.nvim' },
-  { src = 'https://github.com/nvim-flutter/flutter-tools.nvim' },
-  -- { src = 'https://github.com/nvimtools/none-ls.nvim' },
 
   -- ai chats
-  -- {
-  --   src = 'https://github.com/yetone/avante.nvim',
-  --   version = 'main', -- default
-  -- },
-  -- 'https://github.com/Kaiser-Yang/blink-cmp-avante',
-  -- 'https://github.com/MunifTanjim/nui.nvim',
   { src = 'https://github.com/olimorris/codecompanion.nvim' },
   { src = 'https://github.com/ravitemer/codecompanion-history.nvim' },
   -- { src = 'https://github.com/azorng/goose.nvim' },

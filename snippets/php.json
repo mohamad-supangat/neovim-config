@@ -1,4 +1,12 @@
 {
+  "!tcan:": {
+    "body": [
+      "if(!tcan('${1:}')) {",
+      "\tdie('Kamu tidak memiliki akses');",
+      "}"
+    ],
+    "prefix": "!tcan:"
+  },
   "Json Response": {
     "body": [
       "response()->json(${1});"
@@ -711,6 +719,22 @@
       "    }"
     ],
     "prefix": "sekolahku:controller-excel-function"
+  },
+  "tcan": {
+    "body": [
+      "<?php if (tcan('${1:}')) { ?>",
+      "    ${2:}",
+      "<?php } ?>"
+    ],
+    "prefix": "tcan"
+  },
+  "tcan-1": {
+    "body": [
+      "if(tcan('${1:}')) {",
+      "\t${2:}",
+      "}"
+    ],
+    "prefix": "tcan"
   },
   "translatedFormat": {
     "body": "translatedFormat('j F Y')",

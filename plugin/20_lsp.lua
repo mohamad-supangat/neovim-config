@@ -18,35 +18,8 @@ vim.diagnostic.config({
 require('mason').setup()
 require('mason-lspconfig').setup({
   automatic_enable = true,
+  ensure_installed = { 'lua_ls', 'tsc', 'phpantom_lsp', 'markdown_oxide' },
 })
-
-require('mason-tool-installer').setup {
-
-  -- a list of all tools you want to ensure are installed upon
-  -- start
-  ensure_installed = {
-    -- lsp
-    'phpantom_lsp',
-    'emmylua_ls',
-    -- 'ts_ls',
-    'tsc',
-    -- 'markdown_oxide',
-
-    -- formatter
-    'prettierd',
-    'stylua',
-    'ruff',
-    'sqruff',
-    'shfmt',
-    'blade-formatter',
-  },
-  auto_update = false,
-  integrations = {
-    ['mason-lspconfig'] = true,
-  },
-}
-
-require('flutter-tools').setup()
 
 local keymap = vim.keymap.set
 keymap('n', 'K', vim.lsp.buf.hover, { desc = 'LSP: Hover Documentation' })
