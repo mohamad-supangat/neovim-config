@@ -38,6 +38,6 @@ local function make_transparent()
   end
 end
 
-make_transparent()
-
-Config.new_autocmd('ColorScheme', '*', make_transparent, 'Make Color schema transparant')
+-- make_transparent()
+--
+-- Config.new_autocmd('ColorScheme', '*', make_transparent, 'Make Color schema transparant')

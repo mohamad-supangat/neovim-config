@@ -8,6 +8,7 @@ cmp.setup({
       'lsp',
       'path',
       'buffer',
+
     },
     providers = {
       avante = {
