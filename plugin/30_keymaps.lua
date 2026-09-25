@@ -24,7 +24,7 @@ keymap('n', '<leader>cF', function()
   vim.notify('Copied full path: ' .. filepath, vim.log.levels.INFO, { title = 'Clipboard' })
 end, { desc = 'Copy Full File Path to clipboard' })
 
-keymap('n', '<Leader>uu', '<Cmd>Pack<CR>', { desc = 'Update Plugins' })
+keymap('n', '<Leader>uu', '<Cmd>packupdate<CR>', { desc = 'Update Plugins' })
 
 keymap('n', '<Leader>q', ':q<CR>', { desc = 'Exit neovim' })
 
